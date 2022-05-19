@@ -7,11 +7,11 @@ export default function Home() {
     return (
         <>
             <HeroSection/>
-            {/*<Canvas id={'canvas-space'} linear flat>*/}
-            {/*    <Suspense fallback={null}>*/}
-            {/*        <SpaceThreejs/>*/}
-            {/*    </Suspense>*/}
-            {/*</Canvas>*/}
+            <Canvas id={'canvas-space'} linear flat>
+                <Suspense fallback={null}>
+                    <SpaceThreejs/>
+                </Suspense>
+            </Canvas>
         </>
     )
 }
