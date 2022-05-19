@@ -53,11 +53,11 @@ const MyButton = styled(Button)`
   }
 `
 
-function HeroSection(props) {
+function HeroSection() {
     return (
         <Section>
             <HeroImageStyled src={Heroimage} alt={"Hero image"}/>
-            <MyButton backColor={"#5363FF"}>
+            <MyButton backcolor={"#5363FF"}>
                     Join Now
             </MyButton>
         </Section>

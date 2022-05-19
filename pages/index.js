@@ -14,11 +14,16 @@ export default function Home() {
         [],
     );
 
+    if (door) {
+        return (<>
+            <HeroSection/>
+        </>);
+    }
 
     return (
         <>
-            <Box hidden={door} style={{position: "relative"}} >
-                <Canvas id={'canvas-space'} camera={{position: [-180,0,0]}}>
+            <Box style={{position: "relative"}}>
+                <Canvas id={'canvas-space'} >
                     <Suspense fallback={null}>
                         <SpaceThreejs/>
                     </Suspense>
@@ -26,20 +31,17 @@ export default function Home() {
                 </Canvas>
                 <Button
                     variant={"contained"}
-                    backColor={"darkslategrey"}
+                    backcolor={"darkslategrey"}
                     onClick={openDoor}
                     sx={{
                         width: "18em",
                         position: "absolute",
                         left: "50%",
                         marginLeft: "-9em",
-                        bottom: "1em",
+                        bottom: "5em",
                     }}>
                     Open the Door
                 </Button>
-            </Box>
-            <Box hidden={!door}>
-                <HeroSection/>
             </Box>
         </>
     )

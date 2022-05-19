@@ -2,7 +2,7 @@ import {styled, Button as MuiButton} from "@mui/material";
 
 
 const Button = styled(MuiButton)`
-  background-color: ${props => props.backColor ? props.backColor : 'transparent'};
+  background-color: ${props => props.backcolor ? props.backcolor : 'transparent'};
   text-decoration: none;
   padding: 10px 60px;
   color: whitesmoke;
