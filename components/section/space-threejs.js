@@ -1,88 +1,62 @@
 import React from 'react';
-import {Environment, OrbitControls, Stars, useTexture} from "@react-three/drei";
-import {useFrame, useThree} from "@react-three/fiber";
-import {CubeCamera, CubeTextureLoader, LinearMipmapLinearFilter, RGBFormat, WebGLCubeRenderTarget} from "three";
+import {OrbitControls, Stars} from "@react-three/drei";
+import * as THREE from "three";
+import {useLoader} from "@react-three/fiber";
 
-function SkyBox() {
-    const {scene} = useThree();
-    const loader = new CubeTextureLoader();
-    // The CubeTextureLoader load method takes an array of urls representing all 6 sides of the cube.
-    // Set the scene background property to the resulting texture.
-    const texture = loader.load([
-        "/bg3-je3ddz.jpg",
-        "/bg3-je3ddz.jpg",
-        "/bg3-je3ddz.jpg",
-        "/bg3-je3ddz.jpg",
-        "/bg3-je3ddz.jpg",
-        "/bg3-je3ddz.jpg",
-    ]);
-    console.log(texture, "the texture")
-    scene.background = texture
-    return null;
-}
 
-const Background = () => {
+export function ThreeInit() {
+    // const {setDefaultCamera } = useThree()
+    //
+    // setDefaultCamera()
 
-    const {gl} = useThree();
+    // const scene = new THREE.Scene();
+    const textureSphereBg = useLoader(THREE.TextureLoader, 'https://i.ibb.co/MSfFyjt/popro.jpg');
+    const textureNucleus = useLoader(THREE.TextureLoader, 'https://i.ibb.co/xSkNWbx/black-sheep.png');
+    // const textureStar = useLoader(THREE.TextureLoader, "https://i.ibb.co/xSkNWbx/black-sheep.png");
+    // const texture1 = useLoader(THREE.TextureLoader, "https://i.ibb.co/xSkNWbx/black-sheep.png");
+    // const texture2 = useLoader(THREE.TextureLoader, "https://i.ibb.co/xSkNWbx/black-sheep.png");
+    // const texture4 = useLoader(THREE.TextureLoader, "https://i.ibb.co/xSkNWbx/black-sheep.png");
 
-    const texture = useTexture('/bg3-je3ddz.jpg')
-    const formatted = new WebGLCubeRenderTarget(texture.image.height).fromEquirectangularTexture(gl, texture)
+    /*  Nucleus  */
+    textureNucleus.anisotropy = 16;
+    // let icosahedronGeometry = new THREE.IcosahedronGeometry(30, 10);
+    // let lambertMaterial = new THREE.MeshPhongMaterial({map: textureNucleus});
+    // const nucleus = new THREE.Mesh(icosahedronGeometry, lambertMaterial);
+
+    /*    Sphere  Background   */
+    textureSphereBg.anisotropy = 16;
+    // let geometrySphereBg = new THREE.SphereBufferGeometry(150, 40, 40);
+    // let materialSphereBg = new THREE.MeshBasicMaterial({
+    //     side: THREE.BackSide,
+    //     map: textureSphereBg,
+    // });
+    // const sphereBg = new THREE.Mesh(geometrySphereBg, materialSphereBg);
+//     scene.add(sphereBg);
+
     return (
-        <primitive attach="background" object={formatted.texture}/>
+        <>
+            <ambientLight intensity={1}/>
+            <directionalLight/>
+            <mesh>
+                <icosahedronGeometry args={[30, 10]}/>
+                <meshPhongMaterial map={textureNucleus}/>
+            </mesh>
+            <mesh>
+                <sphereBufferGeometry args={[150, 40, 40]}/>
+                <meshBasicMaterial side={THREE.BackSide} map={textureSphereBg}/>
+            </mesh>
+        </>
     )
 }
 
-// Geometry
-function Sphere() {
-    const {scene, gl} = useThree();
-    // The cubeRenderTarget is used to generate a texture for the reflective sphere.
-    // It must be updated on each frame in order to track camera movement and other changes.
-    const cubeRenderTarget = new WebGLCubeRenderTarget(256, {
-        format: RGBFormat,
-        generateMipmaps: true,
-        minFilter: LinearMipmapLinearFilter
-    });
-    const cubeCamera = new CubeCamera(1, 1000, cubeRenderTarget);
-    cubeCamera.position.set(0, 0, 0);
-    scene.add(cubeCamera);
-
-    // Update the cubeCamera with current renderer and scene.
-    useFrame(() => cubeCamera.update(gl, scene));
-
-    return (
-        <mesh visible position={[0, 0, 0]} rotation={[0, 0, 0]} castShadow>
-            <directionalLight intensity={0.5}/>
-            <sphereGeometry attach="geometry" args={[2, 32, 32]}/>
-            <meshBasicMaterial
-                attach="material"
-                envMap={cubeCamera.renderTarget.texture}
-                color="white"
-                roughness={0.1}
-                metalness={1}
-            />
-        </mesh>
-    );
-}
-
-function SpaceThreejs(props) {
+function SpaceThreejs() {
     return (
         <>
             <OrbitControls
                 autoRotate={true}
-                autoRotateSpeed={1}
-                enableZoom={false}
             />
-            <Sphere/>
-            <Stars count={200} radius={20} fade speed={2}/>
-            {/*<Environment background>*/}
-            {/*    <mesh >*/}
-            {/*        /!*<sphereGeometry args={[1, 64, 64]} />*!/*/}
-            {/*        <Background/>*/}
-            {/*    </mesh>*/}
-            {/*</Environment>*/}
-            {/*<SkyBox/>*/}
-            {/*<Image url={"/black sheep.png"}/>*/}
-            <Background/>
+            <ThreeInit/>
+            <Stars radius={50} fade speed={2}/>
         </>
     );
 }

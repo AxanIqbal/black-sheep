@@ -5,7 +5,7 @@ const Button = styled(MuiButton)`
   background-color: ${props => props.backColor ? props.backColor : 'transparent'};
   text-decoration: none;
   padding: 10px 60px;
-  color: black;
+  color: whitesmoke;
   width: 100%;
   text-align: center;
   border-radius: 100px;

@@ -792,6 +792,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/three@npm:^0.140.0":
+  version: 0.140.0
+  resolution: "@types/three@npm:0.140.0"
+  checksum: 05693787002f0e879e76a09cfd474d4fd100779f00c048e380d146783adaff539846988625b0f9117451bf2790637a236c68111f7f3e160f5227373a037381ba
+  languageName: node
+  linkType: hard
+
 "@typescript-eslint/parser@npm:^5.21.0":
   version: 5.25.0
   resolution: "@typescript-eslint/parser@npm:5.25.0"
@@ -1052,6 +1059,7 @@ __metadata:
     "@mui/material": ^5.8.0
     "@react-three/drei": ^9.11.0
     "@react-three/fiber": ^8.0.17
+    "@types/three": ^0.140.0
     eslint: 8.15.0
     eslint-config-next: 12.1.6
     next: 12.1.6
