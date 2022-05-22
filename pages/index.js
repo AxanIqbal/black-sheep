@@ -4,6 +4,12 @@ import SpaceThreejs from "../components/section/space-threejs";
 import Button from "../components/button";
 import {Box} from "@mui/material";
 import HeroSection from "../components/section/hero-section";
+import SectionButtons from "../components/section/section-buttons";
+import SectionInfoBoard from "../components/section/section-infoboard";
+import SectionDetail from "../components/section/section-detail";
+import SectionCards from "../components/section/section-cards";
+import SectionUniswap from "../components/section/section-uniswap";
+import SectionHowToBuy from "../components/section/section-howtobuy";
 
 export default function Home() {
     const [door, setDoor] = React.useState(false);
@@ -17,6 +23,13 @@ export default function Home() {
     if (door) {
         return (<>
             <HeroSection/>
+            <SectionButtons/>
+            <SectionInfoBoard/>
+            <SectionDetail/>
+            {/*<SectionCalculator/>*/}
+            <SectionCards/>
+            <SectionUniswap/>
+            <SectionHowToBuy/>
         </>);
     }
 

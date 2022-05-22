@@ -36,9 +36,7 @@ export function Nucleus() {
 }
 
 function FixedStars() {
-    const texture1 = useLoader(THREE.TextureLoader, "https://i.ibb.co/xSkNWbx/black-sheep.png");
-    const texture2 = useLoader(THREE.TextureLoader, "https://i.ibb.co/xSkNWbx/black-sheep.png");
-    const texture4 = useLoader(THREE.TextureLoader, "https://i.ibb.co/xSkNWbx/black-sheep.png");
+    const texture = useLoader(THREE.TextureLoader, "https://i.ibb.co/xSkNWbx/black-sheep.png");
 
     function CreateStars({texture, size, total}) {
         let pointGeometry = new THREE.BufferGeometry();
@@ -63,9 +61,9 @@ function FixedStars() {
 
     return (
         <>
-            <CreateStars texture={texture1} size={15} total={20}/>
-            <CreateStars texture={texture2} size={5} total={5}/>
-            <CreateStars texture={texture4} size={7} total={5}/>
+            <CreateStars texture={texture} size={15} total={20}/>
+            <CreateStars texture={texture} size={5} total={5}/>
+            <CreateStars texture={texture} size={7} total={5}/>
         </>
     )
 }

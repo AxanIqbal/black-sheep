@@ -14,7 +14,6 @@ const Button = styled(MuiButton)`
   transition-duration: 300ms;
 
   &:hover {
-    color: whitesmoke;
     background-color: darkslategrey;
     border-color: darkslategrey;
   }
