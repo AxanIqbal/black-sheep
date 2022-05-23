@@ -60,9 +60,9 @@ function SectionButtons() {
                         </Stack>
                     </Container>
                 </Grid>
-                <Grid item sm={12} md={6} sx={{margin: 'auto'}}>
-                    <ResponsiveContainer height={300}>
-                        <PieChart >
+                <Grid item sm={12} md={6} sx={{margin: 'auto', width: "100%"}}>
+                    <ResponsiveContainer height={200} width={"100%"}>
+                        <PieChart>
                             <Pie data={data01} dataKey={"value"} nameKey={"name"} innerRadius={"60%"} outerRadius={"100%"} cx="50%" cy="50%" label={props => `${props.name} ${props.value}%`} />
                         </PieChart>
                     </ResponsiveContainer>
