@@ -2,7 +2,8 @@ import {styled, Button as MuiButton} from "@mui/material";
 
 
 const Button = styled(MuiButton)`
-  background-color: ${props => props.backcolor ? props.backcolor : 'transparent'};
+  background-image: linear-gradient(to right, #7731E7, #04BFCD);
+  //background: linear-gradient(249deg,#04bfcd 20%, #7731e7 60%);
   text-decoration: none;
   padding: 10px 60px;
   color: whitesmoke;

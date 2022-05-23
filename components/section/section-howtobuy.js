@@ -2,9 +2,6 @@ import {Stack, styled as styledMui} from "@mui/material";
 import Section from "../section";
 import styled from "@emotion/styled";
 
-const MySection = styledMui(Section)`
-  background-color: darkslategrey;
-`
 const MyVideo = styled.video`
   border-radius: 20px;
 `
@@ -20,14 +17,14 @@ const MyStack = styled(Stack)`
 
 function SectionHowToBuy() {
     return (
-        <MySection>
+        <Section>
             <MyStack justifyItems="center" sx={{width: '100%'}}>
                 {/*<MyTypo my={2} variant={'h3'}>How to buy</MyTypo>*/}
                 <MyVideo preload="metadata" controls poster={'/THUMBNAIL.jpg'}>
                     <source src={'/Comp_1.mp4'} type='video/mp4'/>
                 </MyVideo>
             </MyStack>
-        </MySection>
+        </Section>
     );
 }
 

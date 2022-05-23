@@ -2,7 +2,8 @@ html,
 body {
   padding: 0;
   margin: 0;
-  background-image: linear-gradient(to right bottom, #414344, black);
+  background-image: url("/section-bg.jpg");
+  background-size: cover;
   color: white;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;

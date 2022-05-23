@@ -3,17 +3,17 @@ import Section from "../section";
 import Button from "../button";
 
 const MySection = styled(Section)`
-  background-image: linear-gradient(to bottom right, #381710, #36150E);
+  background: linear-gradient(141deg, rgba(47, 79, 79, 0.8) 10%, rgba(54, 21, 14, 0.8) 50%);
 `
 
 const MyButton = styled(Button)`
   width: 20em;
   margin: 3em auto;
-  background-color: #414344;
 `
 
 const MyCard = styled(Card)`
   background-color: darkslategrey;
+  //background-image: linear-gradient(to bottom right, #7731E7, #04BFCD);
   width: 20em;
   border-radius: 10px;
   
@@ -23,7 +23,7 @@ const MyCard = styled(Card)`
   }
 
   & > div > h5 {
-    color: #ff7f0f;
+    color: rgba(130, 106, 36, 0.7);
   }
 
   & > div > p {

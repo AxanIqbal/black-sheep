@@ -10,6 +10,7 @@ import SectionDetail from "../components/section/section-detail";
 import SectionCards from "../components/section/section-cards";
 import SectionUniswap from "../components/section/section-uniswap";
 import SectionHowToBuy from "../components/section/section-howtobuy";
+import Layout from "../components/layout";
 
 export default function Home() {
     const [door, setDoor] = React.useState(false);
@@ -21,7 +22,8 @@ export default function Home() {
     );
 
     if (door) {
-        return (<>
+        return (
+            <Layout>
             <HeroSection/>
             <SectionButtons/>
             <SectionInfoBoard/>
@@ -30,7 +32,8 @@ export default function Home() {
             <SectionCards/>
             <SectionUniswap/>
             <SectionHowToBuy/>
-        </>);
+        </Layout>
+        );
     }
 
     return (

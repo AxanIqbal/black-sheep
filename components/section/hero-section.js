@@ -27,7 +27,6 @@ const MyButton = styled(Button)`
   transition: transform .3s;
   border-bottom-right-radius: 0;
   border-top-right-radius: 0;
-  background-color: darkslategrey;
   
 
   & > span > img {
@@ -50,6 +49,7 @@ const MyButton = styled(Button)`
 
   &:hover {
     transform: translateY(-0.2rem);
+    box-shadow: 0px 0px 20px 5px rgba(4,191,205,0.75);
   }
 `
 

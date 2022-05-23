@@ -22,8 +22,9 @@ const Heading = styled(Typography)`
   flex-grow: 1;
 `
 const CustomAppBar = styled(MuiAppBar)`
-  //background-color: rgb(184, 97, 7);
-  background-image: linear-gradient(to right bottom, rgb(220, 124, 39), rgb(182, 85, 0));
+  //background-color: rgba(130, 106, 36, 0.7);
+  //background-image: linear-gradient(to right bottom, rgb(220, 124, 39), rgb(182, 85, 0));
+  background: linear-gradient(331deg, rgba(47, 79, 79, 0.8) 10%, rgba(54, 21, 14, 0.8) 50%);
   display: flex;
   margin: auto;
   justify-items: center;
@@ -82,6 +83,7 @@ const DrawerStack = styled(Stack)`
 
 function AppBar(props) {
     const [drawer, setDrawer] = useState(false);
+    const router = useRouter();
 
     return (
         <ElevationScroll {...props}>
@@ -97,8 +99,8 @@ function AppBar(props) {
                             <MyDrawer anchor={'right'} open={drawer}
                                       onClose={() => setDrawer(false)} PaperProps={{
                                 sx: {
-                                    // backgroundColor: 'rgba(184, 97, 7,0.8)',
-                                    backgroundImage: 'linear-gradient(to right bottom, rgba(220, 124, 39, 0.8), rgba(182, 85, 0, 0.90))',
+                                    // backgroundColor: "rgba(130,106,36,0.9)",
+                                    backgroundImage: 'linear-gradient(331deg, #2f4f4f 10%, #36150e 50%)',
                                     // justifyContent: 'center',
                                     width: '80%'
                                 }
@@ -108,9 +110,9 @@ function AppBar(props) {
                                     <Stack spacing={2}>
                                         <MyButton variant={'outlined'} style={{width: "15em"}}>PancakeSwap
                                             Link</MyButton>
-                                        <MyButton variant={'outlined'} style={{width: "15em"}} onClick={event => {
+                                        <MyButton variant={'outlined'} style={{width: "15em"}} onClick={async event => {
                                             event.preventDefault()
-                                            // await router.push('WHITEPAPER.pdf')
+                                            await router.push('WHITEPAPER.pdf')
                                         }}>WHITEPAPER</MyButton>
                                     </Stack>
                                     <Divider color={'darkslategrey'}/>
@@ -134,9 +136,9 @@ function AppBar(props) {
                             </IconButton>
                             <MyButton variant={'outlined'} style={{width: "15em"}}
                                       href={'https://pancakeswap.finance/'}>PancakeSwap Link</MyButton>
-                            <MyButton variant={'outlined'} style={{width: "15em"}} onClick={event => {
+                            <MyButton variant={'outlined'} style={{width: "15em"}} onClick={async event => {
                                 event.preventDefault()
-                                // await router.push('WHITEPAPER.pdf')
+                                await router.push('WHITEPAPER.pdf')
                             }}>WHITEPAPER</MyButton>
                         </Stack>
                     </MyToolbar>
