@@ -1,7 +1,8 @@
-import React from 'react';
+import React, {useRef} from 'react';
 import {OrbitControls} from "@react-three/drei";
 import * as THREE from "three";
-import {useLoader} from "@react-three/fiber";
+import {useFrame, useLoader, useThree} from "@react-three/fiber";
+import {SimplexNoise} from "three/examples/jsm/math/SimplexNoise";
 
 function randomPointSphere(radius) {
     let theta = 2 * Math.PI * Math.random();
@@ -14,21 +15,39 @@ function randomPointSphere(radius) {
 
 function BackGround() {
     const textureSphereBg = useLoader(THREE.TextureLoader, 'https://i.ibb.co/MSfFyjt/popro.jpg');
+    const mesh = useRef();
     textureSphereBg.anisotropy = 16;
+
+    useFrame(() => {
+        mesh.current.rotation.x += 0.002
+        mesh.current.rotation.y += 0.002
+        mesh.current.rotation.z += 0.002
+    })
+
     return (
-        <mesh>
-            <sphereBufferGeometry args={[150, 40, 40]}/>
+        <mesh ref={mesh}>
+            <sphereBufferGeometry args={[100, 30, 30]}/>
             <meshBasicMaterial side={THREE.BackSide} map={textureSphereBg}/>
         </mesh>
     );
 }
 
 export function Nucleus() {
+    const mesh = useRef()
     const textureNucleus = useLoader(THREE.TextureLoader, 'https://i.ibb.co/xSkNWbx/black-sheep.png');
-    textureNucleus.anisotropy = 16;
+    const noise = new SimplexNoise();
+    // textureNucleus.anisotropy = 16;
+
+    console.log(mesh)
+
+    useFrame(() => {
+        mesh.current.verticesNeedUpdate = true;
+        mesh.current.normalsNeedUpdate = true;
+        mesh.current.rotation.y += 0.002
+    })
 
     return (
-        <mesh>
+        <mesh ref={mesh}>
             <icosahedronGeometry args={[30, 10]}/>
             <meshPhongMaterial map={textureNucleus}/>
         </mesh>
@@ -72,6 +91,9 @@ function Stars() {
     const textureStar = useLoader(THREE.TextureLoader, "https://i.ibb.co/xSkNWbx/black-sheep.png");
     const vertices = [];
     const starsGeometry = new THREE.BufferGeometry();
+    const point = useRef()
+
+    console.log(point, "the point")
 
     for (let i = 0; i < 50; i++) {
         let particleStar = randomPointSphere(150);
@@ -90,7 +112,7 @@ function Stars() {
 
 
     return (
-        <points args={[starsGeometry]}>
+        <points ref={point} args={[starsGeometry]}>
             <pointsMaterial
                 side={5}
                 color={"#ffffff"}
@@ -105,6 +127,10 @@ function Stars() {
 }
 
 function SpaceThreejs() {
+    useThree(({camera}) => {
+        camera.position.set(0, 0, 230);
+    })
+    // const camera = <perspectiveCamera args={[55,window.innerWidth / window.innerHeight, 0.01, 1000]} position={[0,0,230]}/>
     return (
         <>
             <OrbitControls
@@ -113,9 +139,10 @@ function SpaceThreejs() {
                 maxDistance={350}
                 minDistance={150}
                 enablePan={false}
+                // camera={camera}
             />
             {/*<perspectiveCamera args={[55, window.innerWidth / window.innerHeight, 0.01, 1000]} position={[0,0,230]} />*/}
-            <directionalLight args={["#fff", 2]} position={[0, 50, 20]}/>
+            <directionalLight args={["#fff", 2]} position={[0, 50, -20]}/>
             <ambientLight args={["#ffffff", 1]} position={[0, 20, 20]}/>
             <Nucleus/>
             <BackGround/>

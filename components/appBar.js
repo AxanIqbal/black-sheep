@@ -14,13 +14,12 @@ import {
 } from "@mui/material";
 import {cloneElement, useState} from "react";
 import Button from "./button";
-import {Divide as Hamburger} from 'hamburger-react'
-import {useRouter} from "next/router";
+import {Divide as Hamburger} from 'hamburger-react';
 import {FaTelegram, FaTwitter} from "react-icons/fa";
+import Logo from "../public/favicon.ico"
+import {useRouter} from "next/router";
+import Image from "next/image";
 
-const Heading = styled(Typography)`
-  flex-grow: 1;
-`
 const CustomAppBar = styled(MuiAppBar)`
   //background-color: rgba(130, 106, 36, 0.7);
   //background-image: linear-gradient(to right bottom, rgb(220, 124, 39), rgb(182, 85, 0));
@@ -85,45 +84,45 @@ function AppBar(props) {
     const [drawer, setDrawer] = useState(false);
     const router = useRouter();
 
+    // const GalleriaButton = <MyButton variant={'outlined'} style={{width: "15em"}}
+    //                                  onClock={() => router.push("/galleria")}>NFT GALLERIA</MyButton>
+    // const GameButton = <MyButton variant={'outlined'} style={{width: "15em"}}
+    //                              onClick={() => router.push("/game")}>GAME</MyButton>
+
     return (
         <ElevationScroll {...props}>
             <CustomAppBar position={"sticky"} color={'primary'}>
                 <Container maxWidth={"xl"}>
                     <MyToolbar disableGutters>
-                        <Heading variant="h6">
-                            CATFUN
-                        </Heading>
+                        <Box sx={{
+                            display: "flex",
+                            flexGrow: 1,
+                            alignItems: "center",
+                        }}>
+                            <Image src={Logo} alt={"logo"}/>
+                            <Typography variant="h6" alignSelf={"end"}>
+                                BLACKSHEEP
+                            </Typography>
+                        </Box>
                         <Box sx={{display: {xs: 'flex', sm: 'none'}}}>
                             <Hamburger color={"whitesmoke"} toggled={drawer}
                                        onToggle={() => setDrawer(prevState => !prevState)}/>
                             <MyDrawer anchor={'right'} open={drawer}
                                       onClose={() => setDrawer(false)} PaperProps={{
                                 sx: {
-                                    // backgroundColor: "rgba(130,106,36,0.9)",
                                     backgroundImage: 'linear-gradient(331deg, #2f4f4f 10%, #36150e 50%)',
-                                    // justifyContent: 'center',
                                     width: '80%'
                                 }
                             }}
                                       onOpen={() => setDrawer(true)}>
                                 <DrawerStack spacing={4}>
                                     <Stack spacing={2}>
-                                        <MyButton variant={'outlined'} style={{width: "15em"}}>PancakeSwap
-                                            Link</MyButton>
-                                        <MyButton variant={'outlined'} style={{width: "15em"}} onClick={async event => {
-                                            event.preventDefault()
-                                            await router.push('WHITEPAPER.pdf')
-                                        }}>WHITEPAPER</MyButton>
+                                        <MyButton variant={'outlined'} style={{width: "15em"}}
+                                                  onClock={() => router.push("/galleria")}>NFT GALLERIA</MyButton>
+                                        <MyButton variant={'outlined'} style={{width: "15em"}}
+                                                  onClick={() => router.push("/game")}>GAME</MyButton>
                                     </Stack>
                                     <Divider color={'darkslategrey'}/>
-                                    <Stack spacing={2}>
-                                        <MyButton variant={'outlined'} href={'https://twitter.com/catfuntoken'}
-                                                  style={{width: "15em", display: 'flex'}}
-                                                  endIcon={<FaTwitter color={'darkslategrey'}/>}>Twitter</MyButton>
-                                        <MyButton variant={'outlined'} href={'https://t.me/CATFUNOfficial'}
-                                                  style={{width: "15em", display: 'flex'}}
-                                                  endIcon={<FaTelegram color={'darkslategrey'}/>}>Telegram</MyButton>
-                                    </Stack>
                                 </DrawerStack>
                             </MyDrawer>
                         </Box>
@@ -135,11 +134,9 @@ function AppBar(props) {
                                 <FaTelegram color={'darkslategrey'}/>
                             </IconButton>
                             <MyButton variant={'outlined'} style={{width: "15em"}}
-                                      href={'https://pancakeswap.finance/'}>PancakeSwap Link</MyButton>
-                            <MyButton variant={'outlined'} style={{width: "15em"}} onClick={async event => {
-                                event.preventDefault()
-                                await router.push('WHITEPAPER.pdf')
-                            }}>WHITEPAPER</MyButton>
+                                      onClock={() => router.push("/galleria")}>NFT GALLERIA</MyButton>
+                            <MyButton variant={'outlined'} style={{width: "15em"}}
+                                      onClick={() => router.push("/game")}>GAME</MyButton>
                         </Stack>
                     </MyToolbar>
                 </Container>

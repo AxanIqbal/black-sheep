@@ -8,9 +8,8 @@ import SectionButtons from "../components/section/section-buttons";
 import SectionInfoBoard from "../components/section/section-infoboard";
 import SectionDetail from "../components/section/section-detail";
 import SectionCards from "../components/section/section-cards";
-import SectionUniswap from "../components/section/section-uniswap";
-import SectionHowToBuy from "../components/section/section-howtobuy";
 import Layout from "../components/layout";
+import SectionP2e from "../components/section/section-p2e";
 
 export default function Home() {
     const [door, setDoor] = React.useState(false);
@@ -24,15 +23,13 @@ export default function Home() {
     if (door) {
         return (
             <Layout>
-            <HeroSection/>
-            <SectionButtons/>
-            <SectionInfoBoard/>
-            <SectionDetail/>
-            {/*<SectionCalculator/>*/}
-            <SectionCards/>
-            <SectionUniswap/>
-            <SectionHowToBuy/>
-        </Layout>
+                <HeroSection/>
+                <SectionButtons/>
+                <SectionInfoBoard/>
+                <SectionDetail/>
+                <SectionCards/>
+                <SectionP2e/>
+            </Layout>
         );
     }
 

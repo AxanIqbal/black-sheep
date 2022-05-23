@@ -25,13 +25,13 @@ function SectionInfoBoard() {
                 flexWrap={"wrap"}
             >
                 <Typography>Contract Address<br/>0xaFf35436558E8ea27f6b4c728d042B22381bc038</Typography>
-                <Typography>Token Supply<br/>1,000,000,000,000,000</Typography>
-                <Typography>Max Wallet<br/>
-                    1%</Typography>
-                <Typography>Initial burn<br/>
-                    40%</Typography>
-                <Typography>0% BUY TAX<br/>
-                    We welcome all<br/>Never tax buyers</Typography>
+                <Typography>Total Supply<br/>666 666 666 666 666</Typography>
+                <Typography>Circulating Supply<br/>
+                    666 666 666 666 666</Typography>
+                <Typography>Buy Tax<br/>
+                    0%</Typography>
+                <Typography>Sell Tax<br/>
+                    6%</Typography>
                 <Typography>Official email<br/>
                     support@catfun.io</Typography>
             </Stack>
