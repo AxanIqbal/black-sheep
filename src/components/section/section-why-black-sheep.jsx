@@ -20,7 +20,7 @@ function SectionWhyBlackSheep() {
             }}>
                 <Typography variant={"h2"} paddingY={8} >WHY BLACKSHEEP</Typography>
                 <Typography variant={"h6"}>
-                    Everyone secretly wishes they'd stand out and do things "their way".<br/>
+                    Everyone secretly wishes they'd stand out and do things <span style={{display: "inline-block"}}>"their way"</span>.<br/>
                     Everyone desires to be a cut above the rest but most aren't willing to be a black
                     sheep.
                     <br/>

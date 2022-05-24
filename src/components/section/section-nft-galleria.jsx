@@ -4,6 +4,9 @@ import {Container, Grid, styled, Typography as MuiTypography} from "@mui/materia
 import GalleriaImage from "../../assets/galleria.png"
 const Typography = styled(MuiTypography)`
   font-family: 'Macondo', cursive;
+  @media (max-width: 600px) {
+    background: rgba(0, 0, 0, 0.25);
+  }
 `
 
 const GalleriaImg = styled('img')`
