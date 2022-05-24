@@ -1,5 +1,5 @@
 import React, {useRef} from 'react';
-import {OrbitControls} from "@react-three/drei";
+import {Icosahedron, MeshDistortMaterial, OrbitControls} from "@react-three/drei";
 import {useFrame, useLoader, useThree} from "@react-three/fiber";
 import {SimplexNoise} from "three/examples/jsm/math/SimplexNoise";
 import {
@@ -44,21 +44,22 @@ export function Nucleus() {
     const mesh = useRef()
     const textureNucleus = useLoader(TextureLoader, 'https://i.ibb.co/xSkNWbx/black-sheep.png');
     const noise = new SimplexNoise();
-    // textureNucleus.anisotropy = 16;
+    textureNucleus.anisotropy = 16;
 
-    console.log(mesh)
+    console.log(mesh, "the mesh from neuc")
 
-    useFrame(() => {
-        mesh.current.verticesNeedUpdate = true;
-        mesh.current.normalsNeedUpdate = true;
+    useFrame(({ clock }) => {
+        mesh.current.distort = Math.sin(clock.getElapsedTime())
+        mesh.current.geometry.attributes.position.needsUpdate = true;
+        mesh.current.geometry.attributes.normal.needsUpdate = true;
         mesh.current.rotation.y += 0.002
     })
 
     return (
-        <mesh ref={mesh}>
-            <icosahedronGeometry args={[30, 10]}/>
-            <meshPhongMaterial map={textureNucleus}/>
-        </mesh>
+
+        <Icosahedron ref={mesh}  args={[30, 4]}>
+            <MeshDistortMaterial distort={0.3} radius={1} speed={3} map={textureNucleus} />
+        </Icosahedron>
     )
 }
 

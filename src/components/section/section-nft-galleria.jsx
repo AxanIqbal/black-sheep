@@ -1,6 +1,6 @@
 import React from 'react';
 import Section from "../section";
-import {Container, Grid, styled, Typography as MuiTypography} from "@mui/material";
+import {Container, Grid, Stack, styled, Typography as MuiTypography} from "@mui/material";
 import GalleriaImage from "../../assets/galleria.png"
 const Typography = styled(MuiTypography)`
   font-family: 'Macondo', cursive;
@@ -12,14 +12,18 @@ const Typography = styled(MuiTypography)`
 const GalleriaImg = styled('img')`
   filter: blur(0.5px) drop-shadow(10px 10px 14px #000000);
   width: 80%;
+
+  @media (max-width: 600px) {
+    width: 100%;
+  }
 `
 
 function SectionNftGalleria() {
     return (
         <Section>
-            <Container>
+            <Stack width={"100%"} alignContent={"center"}>
                 <Typography variant={"h3"} fontWeight={600} align={"center"} paddingY={8}>NFT Galleria</Typography>
-                <Grid container paddingX={7} spacing={2}>
+                <Grid container paddingX={2} spacing={2}>
                     <Grid item sm={12} md={6} alignItems={"center"} margin={"auto"}>
                         <GalleriaImg src={GalleriaImage} />
                     </Grid>
@@ -39,7 +43,7 @@ function SectionNftGalleria() {
                         </Typography>
                     </Grid>
                 </Grid>
-            </Container>
+            </Stack>
         </Section>
     );
 }

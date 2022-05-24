@@ -30,6 +30,10 @@ const MyCard = styled(Card)`
 const GameImg = styled('img')`
   filter: blur(0.5px) drop-shadow(10px 10px 14px #000000);
   width: 80%;
+
+  @media (max-width: 600px) {
+    width: 100%;
+  }
 `
 
 function SectionP2e() {
@@ -37,7 +41,7 @@ function SectionP2e() {
         <Section>
             <Stack sx={{width: "100%"}} alignContent={"center"}>
                 <Typography variant={"h3"} fontWeight={600} align={"center"} paddingY={8}>P2E</Typography>
-                <Grid container paddingX={7} spacing={2}>
+                <Grid container paddingX={2} spacing={2}>
                     <Grid item sm={12} md={6}>
                         <GameImg src={GameImage} />
                     </Grid>
