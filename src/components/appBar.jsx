@@ -30,7 +30,7 @@ const CustomAppBar = styled(MuiAppBar)`
 `
 
 const MyButton = styled(Button)`
-  padding: 5px 10px;
+  padding: 10px 10px;
 `
 
 const MyToolbar = styled(Toolbar)(({theme}) => ({
@@ -103,7 +103,7 @@ function AppBar(props) {
                             BLACKSHEEP
                         </Heading>
                         </Box>
-                        <Box sx={{display: {xs: 'flex', sm: 'none'}}}>
+                        <Box sx={{display: {xs: 'flex', md: 'none'}}}>
                             <Hamburger color={"whitesmoke"} toggled={drawer}
                                        onToggle={() => setDrawer(prevState => !prevState)}/>
                             <MyDrawer anchor={'right'} open={drawer}
@@ -125,7 +125,7 @@ function AppBar(props) {
                                 </DrawerStack>
                             </MyDrawer>
                         </Box>
-                        <Stack direction={'row'} spacing={1} sx={{display: {xs: 'none', sm: 'flex'}}}>
+                        <Stack direction={'row'} spacing={1} sx={{display: {xs: 'none', md: 'flex'}}}>
                             <IconButton href={'https://twitter.com/catfuntoken'}>
                                 <FaTwitter color={'darkslategrey'}/>
                             </IconButton>

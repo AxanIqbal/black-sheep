@@ -376,8 +376,11 @@
         console.log("the script loaded", h)
 
         let base = (e) => {
-            var x = e.pageX / window.innerWidth - 0.5;
-            var y = e.pageY / window.innerHeight - 0.5;
+            console.log(e, "the base")
+            var dX = e.pageX || e.touches[0].pageX;
+            var dY = e.pageY || e.touches[0].pageY;
+            var x = dX / window.innerWidth - 0.5;
+            var y = dY / window.innerHeight - 0.5;
             h.style.transform = `
         perspective(90vw)
         rotateX(${ y * 4  + 75}deg)
@@ -387,6 +390,7 @@
         }
 
         b.addEventListener("pointermove", base);
+        b.addEventListener("touchmove", base);
     </script>
 </body>
 </html>

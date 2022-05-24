@@ -1,5 +1,6 @@
 import {Card, Grid, Stack, styled, Typography as MuiTypography} from "@mui/material";
 import Section from "../section";
+import GameImage from "../../assets/game.png"
 
 const Typography = styled(MuiTypography)`
   font-family: 'Macondo', cursive;
@@ -26,6 +27,11 @@ const MyCard = styled(Card)`
   }
 `
 
+const GameImg = styled('img')`
+  filter: blur(0.5px) drop-shadow(10px 10px 14px #000000);
+  width: 80%;
+`
+
 function SectionP2e() {
     return (
         <Section>
@@ -33,7 +39,7 @@ function SectionP2e() {
                 <Typography variant={"h3"} fontWeight={600} align={"center"} paddingY={8}>P2E</Typography>
                 <Grid container paddingX={7} spacing={2}>
                     <Grid item sm={12} md={6}>
-
+                        <GameImg src={GameImage} />
                     </Grid>
                     <Grid item sm={12} md={6}>
                         <Typography variant={"h5"} fontWeight={600} paddingY={2}>METAVERSE</Typography>

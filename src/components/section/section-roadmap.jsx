@@ -3,7 +3,7 @@ import {Stack, Typography as MuiTypography} from "@mui/material";
 import styled from "@emotion/styled";
 import {
     Timeline,
-    TimelineConnector,
+    TimelineConnector as MuiTimelineConnector,
     TimelineContent,
     TimelineDot,
     TimelineItem,
@@ -14,6 +14,10 @@ import {
 const Typography = styled(MuiTypography)`
   color: whitesmoke;
   font-family: 'Macondo', cursive;
+`
+
+const TimelineConnector = styled(MuiTimelineConnector)`
+  background-image: linear-gradient(to right,#04bfcd , #7731e7 );
 `
 
 const Image = styled.img`
@@ -37,8 +41,10 @@ function SectionRoadmap() {
                             Development
                         </TimelineOppositeContent>
                         <TimelineSeparator>
-                            <TimelineConnector />
-                            <TimelineDot />
+                            <TimelineConnector/>
+                            <TimelineDot sx={{
+                                backgroundColor: "#04bfcd"
+                            }}/>
                             <TimelineConnector />
                         </TimelineSeparator>
                         <TimelineContent
@@ -65,7 +71,9 @@ function SectionRoadmap() {
                         </TimelineOppositeContent>
                         <TimelineSeparator>
                             <TimelineConnector />
-                            <TimelineDot />
+                            <TimelineDot sx={{
+                                backgroundColor: "#04bfcd"
+                            }}/>
                             <TimelineConnector />
                         </TimelineSeparator>
                         <TimelineContent
@@ -90,7 +98,9 @@ function SectionRoadmap() {
                         </TimelineOppositeContent>
                         <TimelineSeparator>
                             <TimelineConnector />
-                            <TimelineDot />
+                            <TimelineDot sx={{
+                                backgroundColor: "#04bfcd"
+                            }}/>
                             <TimelineConnector />
                         </TimelineSeparator>
                         <TimelineContent
@@ -112,7 +122,9 @@ function SectionRoadmap() {
                         </TimelineOppositeContent>
                         <TimelineSeparator>
                             <TimelineConnector />
-                            <TimelineDot />
+                            <TimelineDot sx={{
+                                backgroundColor: "#04bfcd"
+                            }}/>
                             <TimelineConnector />
                         </TimelineSeparator>
                         <TimelineContent
@@ -135,7 +147,9 @@ function SectionRoadmap() {
                         </TimelineOppositeContent>
                         <TimelineSeparator>
                             <TimelineConnector />
-                            <TimelineDot />
+                            <TimelineDot sx={{
+                                backgroundColor: "#04bfcd"
+                            }}/>
                             <TimelineConnector />
                         </TimelineSeparator>
                         <TimelineContent

@@ -1,7 +1,7 @@
 import React from 'react';
 import Section from "../section";
 import {Container, Grid, Stack, styled, Typography as MuiTypography} from "@mui/material";
-import {Pie, PieChart, ResponsiveContainer} from "recharts";
+import {Cell, Pie, PieChart, ResponsiveContainer} from "recharts";
 
 const MySection = styled(Section)`
   background: linear-gradient(141deg, rgba(47, 79, 79, 0.8) 10%, rgba(54, 21, 14, 0.8) 50%);
@@ -58,7 +58,9 @@ function SectionTokenomics() {
                 <Grid item xs={12} sm={6}>
                     <ResponsiveContainer height={"100%"} width={"100%"}>
                         <PieChart height={200} width={200}>
-                            <Pie data={data01} dataKey={"value"} nameKey={"name"} innerRadius={"50%"} outerRadius={"80%"} cx="50%" cy="50%" label={props => `${props.name} ${props.value}%`} />
+                            <Pie data={data01} dataKey={"value"} nameKey={"name"} innerRadius={"50%"} outerRadius={"80%"} cx="50%" cy="50%" label={props => `${props.name} ${props.value}%`}>
+                                {data01.map((value, index) => <Cell fill={"rgba(4,191,205,0.7)"}/>)}
+                            </Pie>
                         </PieChart>
                     </ResponsiveContainer>
                 </Grid>

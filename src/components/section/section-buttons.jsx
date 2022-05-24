@@ -16,9 +16,8 @@ const Container = styled(MuiContainer)`
 `
 
 function SectionButtons() {
-
     return (
-        <Section>>
+        <Section>
             <Container>
                 <Stack spacing={1}>
                     <Typography variant={'h6'}>Blacksheep represents the anomaly, blacksheep represents

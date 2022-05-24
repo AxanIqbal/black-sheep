@@ -1,8 +1,16 @@
 import React, {useRef} from 'react';
 import {OrbitControls} from "@react-three/drei";
-import * as THREE from "three";
 import {useFrame, useLoader, useThree} from "@react-three/fiber";
 import {SimplexNoise} from "three/examples/jsm/math/SimplexNoise";
+import {
+    AdditiveBlending,
+    BackSide,
+    BufferGeometry,
+    Float32BufferAttribute,
+    MathUtils,
+    TextureLoader,
+    Vector3
+} from "three";
 
 function randomPointSphere(radius) {
     let theta = 2 * Math.PI * Math.random();
@@ -10,11 +18,11 @@ function randomPointSphere(radius) {
     let dx = (radius * Math.sin(phi) * Math.cos(theta));
     let dy = (radius * Math.sin(phi) * Math.sin(theta));
     let dz = (radius * Math.cos(phi));
-    return new THREE.Vector3(dx, dy, dz);
+    return new Vector3(dx, dy, dz);
 }
 
 function BackGround() {
-    const textureSphereBg = useLoader(THREE.TextureLoader, 'https://i.ibb.co/MSfFyjt/popro.jpg');
+    const textureSphereBg = useLoader(TextureLoader, 'https://i.ibb.co/MSfFyjt/popro.jpg');
     const mesh = useRef();
     textureSphereBg.anisotropy = 16;
 
@@ -27,14 +35,14 @@ function BackGround() {
     return (
         <mesh ref={mesh}>
             <sphereBufferGeometry args={[100, 30, 30]}/>
-            <meshBasicMaterial side={THREE.BackSide} map={textureSphereBg}/>
+            <meshBasicMaterial side={BackSide} map={textureSphereBg}/>
         </mesh>
     );
 }
 
 export function Nucleus() {
     const mesh = useRef()
-    const textureNucleus = useLoader(THREE.TextureLoader, 'https://i.ibb.co/xSkNWbx/black-sheep.png');
+    const textureNucleus = useLoader(TextureLoader, 'https://i.ibb.co/xSkNWbx/black-sheep.png');
     const noise = new SimplexNoise();
     // textureNucleus.anisotropy = 16;
 
@@ -55,25 +63,25 @@ export function Nucleus() {
 }
 
 function FixedStars() {
-    const texture = useLoader(THREE.TextureLoader, "https://i.ibb.co/xSkNWbx/black-sheep.png");
+    const texture = useLoader(TextureLoader, "https://i.ibb.co/xSkNWbx/black-sheep.png");
 
     function CreateStars({texture, size, total}) {
-        let pointGeometry = new THREE.BufferGeometry();
+        let pointGeometry = new BufferGeometry();
 
         let vertices = []
         for (let i = 0; i < total; i++) {
-            let radius = THREE.MathUtils.randInt(149, 70);
+            let radius = MathUtils.randInt(149, 70);
             let particles = randomPointSphere(radius);
             vertices.push(particles.x, particles.y, particles.z)
             // pointGeometry.vertices.push(particles);
         }
         pointGeometry.setAttribute(
             "position",
-            new THREE.Float32BufferAttribute(vertices, 3)
+            new Float32BufferAttribute(vertices, 3)
         );
         return (
             <points args={[pointGeometry]}>
-                <pointsMaterial size={size} map={texture} blending={THREE.AdditiveBlending}/>
+                <pointsMaterial size={size} map={texture} blending={AdditiveBlending}/>
             </points>
         );
     }
@@ -88,16 +96,16 @@ function FixedStars() {
 }
 
 function Stars() {
-    const textureStar = useLoader(THREE.TextureLoader, "https://i.ibb.co/xSkNWbx/black-sheep.png");
+    const textureStar = useLoader(TextureLoader, "https://i.ibb.co/xSkNWbx/black-sheep.png");
     const vertices = [];
-    const starsGeometry = new THREE.BufferGeometry();
+    const starsGeometry = new BufferGeometry();
     const point = useRef()
 
     console.log(point, "the point")
 
     for (let i = 0; i < 50; i++) {
         let particleStar = randomPointSphere(150);
-        particleStar.velocity = THREE.MathUtils.randInt(50, 200);
+        particleStar.velocity = MathUtils.randInt(50, 200);
         particleStar.startX = particleStar.x;
         particleStar.startY = particleStar.y;
         particleStar.startZ = particleStar.z;
@@ -107,7 +115,7 @@ function Stars() {
 
     starsGeometry.setAttribute(
         "position",
-        new THREE.Float32BufferAttribute(vertices, 3)
+        new Float32BufferAttribute(vertices, 3)
     );
 
 
@@ -116,10 +124,10 @@ function Stars() {
             <pointsMaterial
                 side={5}
                 color={"#ffffff"}
-                transparent
+                transparent={true}
                 opacity={0.8}
                 map={textureStar}
-                blending={THREE.AdditiveBlending}
+                blending={AdditiveBlending}
                 depthWrite={false}
             />
         </points>
@@ -128,7 +136,7 @@ function Stars() {
 
 function SpaceThreejs() {
     useThree(({camera}) => {
-        camera.position.set(0, 0, 230);
+        camera.position.set(-200, 0, 230);
     })
     // const camera = <perspectiveCamera args={[55,window.innerWidth / window.innerHeight, 0.01, 1000]} position={[0,0,230]}/>
     return (

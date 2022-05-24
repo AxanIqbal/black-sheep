@@ -57,7 +57,7 @@ export default function Home() {
                         position: "absolute",
                         left: "50%",
                         marginLeft: "-9em",
-                        bottom: "5em",
+                        bottom: "7em",
                     }}>
                     Open the Door
                 </Button>
