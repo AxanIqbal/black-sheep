@@ -38,8 +38,8 @@ function SectionTokenomics() {
     ];
     return (
         <Section>
-            <Container>
-            <Typography variant={"h2"} paddingY={8} >TOKENOMICS</Typography>
+            <Stack width={"100%"}>
+            <Typography variant={"h3"} paddingY={8} textAlign={"center"} align={"center"}>TOKENOMICS</Typography>
             <Grid container>
                 <Grid item xs={12} sm={6}>
                     <Stack >
@@ -59,13 +59,13 @@ function SectionTokenomics() {
                     <ResponsiveContainer height={"100%"} width={"100%"}>
                         <PieChart height={200} width={200}>
                             <Pie data={data01} dataKey={"value"} nameKey={"name"} innerRadius={"50%"} outerRadius={"80%"} cx="50%" cy="50%" label={props => `${props.name} ${props.value}%`}>
-                                {data01.map((value, index) => <Cell fill={"rgba(4,191,205,0.7)"}/>)}
+                                {data01.map((value, index) => <Cell key={index} fill={"rgba(4,191,205,0.7)"}/>)}
                             </Pie>
                         </PieChart>
                     </ResponsiveContainer>
                 </Grid>
             </Grid>
-            </Container>
+            </Stack>
         </Section>
     );
 }
