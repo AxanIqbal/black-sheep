@@ -5,10 +5,12 @@ import {resolve} from "path"
 // https://vitejs.dev/config/
 const root = resolve(__dirname, 'src')
 const outDir = resolve(__dirname, 'dist')
+const publicDir = resolve(__dirname, 'public')
 
 export default defineConfig({
   plugins: [react()],
   root,
+  publicDir,
   build: {
     outDir,
     emptyOutDir: true,
@@ -17,6 +19,7 @@ export default defineConfig({
         main: resolve(root, 'index.html'),
         game: resolve(root, 'game', 'index.html'),
         galleria: resolve(root, 'galleria', 'index.html'),
+        // whitepaper: resolve(root, 'assets', "whitepaper.pdf")
       }
     }
   }

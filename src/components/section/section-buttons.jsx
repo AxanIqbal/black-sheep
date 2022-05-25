@@ -20,7 +20,7 @@ function SectionButtons() {
         <Section>
             <Container>
                 <Stack spacing={1}>
-                    <Typography variant={'h6'}>Blacksheep represents the anomaly, blacksheep represents
+                    <Typography variant={'h6'} align={"center"}>Blacksheep represents the anomaly, blacksheep represents
                         YOU!</Typography>
                     <Typography variant={"h3"} sx={{fontWeight: 'bold'}} align={"center"}>BLACKSHEEP</Typography>
                     <Grid container spacing={2}>
@@ -30,7 +30,7 @@ function SectionButtons() {
                         </Grid>
                         <Grid item xs={12} sm={6}>
                             <Button variant={'outlined'}
-                                    href={'/WHITEPAPER.pdf'}>WHITEPAPER</Button>
+                                    href={'/whitepaper.pdf'}>WHITEPAPER</Button>
                         </Grid>
                     </Grid>
                 </Stack>

@@ -43,7 +43,9 @@ function SectionP2e() {
                 <Typography variant={"h3"} fontWeight={600} align={"center"} paddingY={8}>P2E</Typography>
                 <Grid container paddingX={2} spacing={2}>
                     <Grid item sm={12} md={6}>
-                        <GameImg src={GameImage} />
+                        <a href={"/game/"}>
+                        <GameImg src={GameImage}/>
+                        </a>
                     </Grid>
                     <Grid item sm={12} md={6}>
                         <Typography variant={"h5"} fontWeight={600} paddingY={2}>METAVERSE</Typography>

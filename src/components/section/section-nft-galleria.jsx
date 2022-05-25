@@ -25,7 +25,9 @@ function SectionNftGalleria() {
                 <Typography variant={"h3"} fontWeight={600} align={"center"} paddingY={8}>NFT Galleria</Typography>
                 <Grid container paddingX={2} spacing={2}>
                     <Grid item sm={12} md={6} alignItems={"center"} margin={"auto"}>
+                        <a href={"/galleria/"}>
                         <GalleriaImg src={GalleriaImage} />
+                        </a>
                     </Grid>
                     <Grid item sm={12} md={6}>
                         <Typography variant={"h5"} fontWeight={600} paddingY={2}>NFTS IN 360</Typography>
