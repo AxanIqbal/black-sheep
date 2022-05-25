@@ -12,7 +12,7 @@ import {
     Vector3
 } from "three";
 import Popro from "../../assets/popro.jpg"
-import BlackSheepImage from "../../assets/black-sheep.png"
+import BlackSheepImage from "../../assets/black sheep.jpg"
 
 function randomPointSphere(radius) {
     let theta = 2 * Math.PI * Math.random();

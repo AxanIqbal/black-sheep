@@ -33,12 +33,10 @@ function SectionRoadmap() {
                 <Timeline position={"alternate"}>
                     <TimelineItem>
                         <TimelineOppositeContent
-                            variant={"h6"}
                             fontFamily={"'Macondo', cursive"}
-                            sx={{ m: 'auto 0', fontWeight: "bold" }}
-                            textTransform={"uppercase"}
+                            sx={{ m: 'auto 0' }}
                         >
-                            Development
+                            <Typography variant={"h6"} sx={{fontWeight: "bold", fontSize: {xs: 16, sm: 20} }} textTransform={"uppercase"}>Development</Typography>
                         </TimelineOppositeContent>
                         <TimelineSeparator>
                             <TimelineConnector/>
