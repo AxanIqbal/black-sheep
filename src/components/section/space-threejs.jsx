@@ -11,6 +11,8 @@ import {
     TextureLoader,
     Vector3
 } from "three";
+import Popro from "../../assets/popro.jpg"
+import BlackSheepImage from "../../assets/black-sheep.png"
 
 function randomPointSphere(radius) {
     let theta = 2 * Math.PI * Math.random();
@@ -22,7 +24,7 @@ function randomPointSphere(radius) {
 }
 
 function BackGround() {
-    const textureSphereBg = useLoader(TextureLoader, 'https://i.ibb.co/MSfFyjt/popro.jpg');
+    const textureSphereBg = useLoader(TextureLoader, Popro);
     const mesh = useRef();
     textureSphereBg.anisotropy = 16;
 
@@ -42,7 +44,7 @@ function BackGround() {
 
 export function Nucleus() {
     const mesh = useRef()
-    const textureNucleus = useLoader(TextureLoader, 'https://i.ibb.co/xSkNWbx/black-sheep.png');
+    const textureNucleus = useLoader(TextureLoader, BlackSheepImage);
     const noise = new SimplexNoise();
     textureNucleus.anisotropy = 16;
 
@@ -64,7 +66,7 @@ export function Nucleus() {
 }
 
 function FixedStars() {
-    const texture = useLoader(TextureLoader, "https://i.ibb.co/xSkNWbx/black-sheep.png");
+    const texture = useLoader(TextureLoader, BlackSheepImage);
 
     function CreateStars({texture, size, total}) {
         let pointGeometry = new BufferGeometry();
@@ -97,7 +99,7 @@ function FixedStars() {
 }
 
 function Stars() {
-    const textureStar = useLoader(TextureLoader, "https://i.ibb.co/xSkNWbx/black-sheep.png");
+    const textureStar = useLoader(TextureLoader, BlackSheepImage);
     const vertices = [];
     const starsGeometry = new BufferGeometry();
     const point = useRef()
