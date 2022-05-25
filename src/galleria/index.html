@@ -8,6 +8,12 @@
     <title>BlackSheep</title>
 </head>
 <body>
+<script>
+    const isMobile = localStorage.mobile || window.navigator.maxTouchPoints > 1;
+    if (isMobile) {
+        window.alert("For better experience please use computer")
+    }
+</script>
 <input type="checkbox" id="lightswitch" accesskey="l" />
 <input type="checkbox" checked="checked" id="wall4" accesskey="x" />
 
