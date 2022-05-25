@@ -5,9 +5,13 @@ import Founder from "../../assets/founder.png";
 import {Stack, Typography as MuiTypography} from "@mui/material";
 
 const HeroImageStyled = styled.img`
-  width: 60vw;
+  width: 30vw;
 
+  @media (max-width: 700px) {
+    width: 60vw;
+  }
 `
+
 const Typography = styled(MuiTypography)`
   font-family: 'Macondo', cursive;
 `

@@ -35,7 +35,7 @@ function SectionRoadmap() {
                         <TimelineOppositeContent
                             variant={"h6"}
                             fontFamily={"'Macondo', cursive"}
-                            sx={{ m: 'auto 0' }}
+                            sx={{ m: 'auto 0', fontWeight: "bold" }}
                             textTransform={"uppercase"}
                         >
                             Development
@@ -62,7 +62,7 @@ function SectionRoadmap() {
                     </TimelineItem>
                     <TimelineItem>
                         <TimelineOppositeContent
-                            sx={{ m: 'auto 0' }}
+                            sx={{ m: 'auto 0', fontWeight: "bold" }}
                             variant={"h6"}
                             fontFamily={"'Macondo', cursive"}
                             textTransform={"uppercase"}
@@ -89,7 +89,7 @@ function SectionRoadmap() {
                     </TimelineItem>
                     <TimelineItem>
                         <TimelineOppositeContent
-                            sx={{ m: 'auto 0' }}
+                            sx={{ m: 'auto 0', fontWeight: "bold" }}
                             variant={"h6"}
                             fontFamily={"'Macondo', cursive"}
                             textTransform={"uppercase"}
@@ -113,7 +113,7 @@ function SectionRoadmap() {
                     </TimelineItem>
                     <TimelineItem>
                         <TimelineOppositeContent
-                            sx={{ m: 'auto 0' }}
+                            sx={{ m: 'auto 0', fontWeight: "bold" }}
                             variant={"h6"}
                             fontFamily={"'Macondo', cursive"}
                             textTransform={"uppercase"}
@@ -138,7 +138,7 @@ function SectionRoadmap() {
                     </TimelineItem>
                     <TimelineItem>
                         <TimelineOppositeContent
-                            sx={{ m: 'auto 0' }}
+                            sx={{ m: 'auto 0', fontWeight: "bold" }}
                             variant={"h6"}
                             fontFamily={"'Macondo', cursive"}
                             textTransform={"uppercase"}
