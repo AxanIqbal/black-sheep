@@ -17,6 +17,7 @@ import Button from "./button";
 import {Divide as Hamburger} from 'hamburger-react';
 import {FaTelegram, FaTwitter} from "react-icons/fa";
 import Logo from "../favicon.ico"
+
 const Heading = styled(Typography)`
   font-family: 'Macondo', cursive;
 `
@@ -72,11 +73,13 @@ function ElevationScroll(props) {
 
 const DrawerStack = styled(Stack)`
   margin: auto;
-  transform: translateY(-4rem);
+  height: 40vh;
+  //transform: translateY(-4rem);
+  justify-content: space-between;
 `
 
 const LogoComp = styled("img")`
-    align-self: center;
+  align-self: center;
 `
 
 // const MyHamburger = styled(Hamburger)`
@@ -98,10 +101,10 @@ function AppBar(props) {
                             flexGrow: 1,
                             alignItems: "center",
                         }}>
-                        <img src={Logo} alt={"logo"}/>
-                        <Heading variant="h6" alignSelf={"end"}>
-                            BLACKSHEEP
-                        </Heading>
+                            <img src={Logo} alt={"logo"}/>
+                            <Heading variant="h6" alignSelf={"end"}>
+                                BLACKSHEEP
+                            </Heading>
                         </Box>
                         <Box sx={{display: {xs: 'flex', md: 'none'}}}>
                             <Hamburger color={"whitesmoke"} toggled={drawer}
@@ -118,10 +121,20 @@ function AppBar(props) {
                                       onOpen={() => setDrawer(true)}>
                                 <DrawerStack spacing={4}>
                                     <Stack spacing={2}>
-                                        <MyButton variant={'outlined'} style={{width: "15em"}} href={"/galleria/"}>NFT GALLERIA</MyButton>
-                                        <MyButton variant={'outlined'} style={{width: "15em"}} href={"/game/"}>GAME</MyButton>
+                                        <MyButton variant={'outlined'} style={{width: "15em"}} href={"/galleria/"}>NFT
+                                            GALLERIA</MyButton>
+                                        <MyButton variant={'outlined'} style={{width: "15em"}}
+                                                  href={"/game/"}>GAME</MyButton>
                                     </Stack>
                                     <Divider color={'darkslategrey'}/>
+                                    <Stack direction={"row"} width={"100"} alignItems={"center"} justifyContent={"center"}>
+                                        <IconButton href={'https://twitter.com/catfuntoken'}>
+                                            <FaTwitter color={'darkslategrey'}/>
+                                        </IconButton>
+                                        <IconButton href={'https://t.me/CATFUNOfficial'}>
+                                            <FaTelegram color={'darkslategrey'}/>
+                                        </IconButton>
+                                    </Stack>
                                 </DrawerStack>
                             </MyDrawer>
                         </Box>
@@ -133,7 +146,7 @@ function AppBar(props) {
                                 <FaTelegram color={'darkslategrey'}/>
                             </IconButton>
                             <MyButton variant={'outlined'} style={{width: "15em"}} href={"/galleria/"}
-                                      >NFT GALLERIA</MyButton>
+                            >NFT GALLERIA</MyButton>
                             <MyButton variant={'outlined'} style={{width: "15em"}} href={"/game/"}>GAME</MyButton>
                         </Stack>
                     </MyToolbar>

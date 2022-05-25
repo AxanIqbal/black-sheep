@@ -13,7 +13,7 @@ const Typography = styled(MuiTypography)`
   font-family: 'Macondo', cursive;
 
   text-shadow: rgb(0, 0, 0) 3px 5px 2px;
-
+  
   @media (max-width: 600px) {
     background: rgba(0, 0, 0, 0.25);
   }
@@ -43,6 +43,13 @@ function SectionTokenomics() {
             "value": 35
         },
     ];
+    const colors = [
+        "rgba(47, 79, 79, 0.7)",
+        "rgba(54, 21, 14, 0.7)",
+        "rgba(245, 245, 245, 0.7)",
+        "rgba(119,49,231,0.7)",
+        "rgba(4,191,205,0.7)"
+    ]
     return (
         <Section>
             <Stack width={"100%"}>
@@ -66,7 +73,7 @@ function SectionTokenomics() {
                     <ResponsiveContainer height={"100%"} width={"100%"}>
                         <PieChart height={200} width={200}>
                             <Pie data={data01} dataKey={"value"} nameKey={"name"} innerRadius={"50%"} outerRadius={"80%"} cx="50%" cy="50%" label={props => `${props.name} ${props.value}%`}>
-                                {data01.map((value, index) => <Cell key={index} fill={"rgba(4,191,205,0.7)"}/>)}
+                                {data01.map((value, index) => <Cell key={index} fill={colors[index]}/>)}
                             </Pie>
                         </PieChart>
                     </ResponsiveContainer>
