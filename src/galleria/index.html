@@ -9,7 +9,7 @@
 </head>
 <body>
 <script>
-    const isMobile = localStorage.mobile || window.navigator.maxTouchPoints > 1;
+    const isMobile = localStorage.mobile || window.navigator.maxTouchPoints > 1 || /Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent);
     if (isMobile) {
         window.confirm("For better experience please use computer")
     }
