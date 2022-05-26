@@ -74,7 +74,6 @@ function ElevationScroll(props) {
 const DrawerStack = styled(Stack)`
   margin: auto;
   height: 40vh;
-  //transform: translateY(-4rem);
   justify-content: space-between;
 `
 
@@ -128,10 +127,10 @@ function AppBar(props) {
                                     </Stack>
                                     <Divider color={'darkslategrey'}/>
                                     <Stack direction={"row"} width={"100"} alignItems={"center"} justifyContent={"center"}>
-                                        <IconButton href={'https://twitter.com/catfuntoken'}>
+                                        <IconButton href={'https://twitter.com/BlackSheep_xyz'}>
                                             <FaTwitter color={'darkslategrey'}/>
                                         </IconButton>
-                                        <IconButton href={'https://t.me/CATFUNOfficial'}>
+                                        <IconButton href={'https://t.me/BlackSheep_XYZ'}>
                                             <FaTelegram color={'darkslategrey'}/>
                                         </IconButton>
                                     </Stack>
@@ -139,10 +138,10 @@ function AppBar(props) {
                             </MyDrawer>
                         </Box>
                         <Stack direction={'row'} spacing={1} sx={{display: {xs: 'none', md: 'flex'}}}>
-                            <IconButton href={'https://twitter.com/catfuntoken'}>
+                            <IconButton href={'https://twitter.com/BlackSheep_xyz'}>
                                 <FaTwitter color={'darkslategrey'}/>
                             </IconButton>
-                            <IconButton href={'https://t.me/CATFUNOfficial'}>
+                            <IconButton href={'https://t.me/BlackSheep_XYZ'}>
                                 <FaTelegram color={'darkslategrey'}/>
                             </IconButton>
                             <MyButton variant={'outlined'} style={{width: "15em"}} href={"/galleria/"}
