@@ -13,7 +13,7 @@ const Section = styled.section`
   }
   
   @media (max-width: 600px) {
-    padding: 4rem 1em;
+    padding: 1rem 1em;
   }
 `
 

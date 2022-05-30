@@ -29,7 +29,7 @@ function SectionRoadmap() {
     return (
         <Section>
             <Stack sx={{width: '100%'}}>
-                <Typography variant={"h3"} fontWeight={600} align={'center'}>ROADMAP</Typography>
+                <Typography variant={"h3"} fontWeight={600} paddingY={8} align={'center'}>ROADMAP</Typography>
                 <Timeline position={"alternate"}>
                     <TimelineItem>
                         <TimelineOppositeContent

@@ -7,6 +7,10 @@ const MyVideo = styled("video")`
   border-radius: 20px;
   width: 90%;
   margin: auto;
+  
+  @media (max-width: 650px) {
+    width: 100%;
+  }
 `
 
 function SectionVideo() {
