@@ -50,8 +50,8 @@ function SectionTokenomics() {
             <Stack width={"100%"}>
             <Typography variant={"h3"} paddingY={8} textAlign={"center"} align={"center"}>TOKENOMICS</Typography>
             <Grid container>
-                <Grid item xs={12} sm={6}>
-                    <Stack >
+                <Grid item xs={12} md={6}>
+                    <Stack>
                         <Typography variant={"body1"} paddingY={1}>$666 is a BEP20 token which started on the
                             BINANCE SMART CHAIN blockchain MAY 26, 2022.
                             The max supply is 666 trillion and one of its key
@@ -64,7 +64,7 @@ function SectionTokenomics() {
                         <Typography variant={"body1"} paddingY={1}>SELL TAX: LP + 6% to Marketing/Development</Typography>
                     </Stack>
                 </Grid>
-                <Grid item xs={12} sm={6}>
+                <Grid item xs={12} md={6}>
                     <ResponsiveContainer height={"100%"} width={"100%"}>
                         <PieChart height={200} width={200}>
                             <Pie data={data01} dataKey={"value"} nameKey={"name"} innerRadius={"50%"} outerRadius={"80%"} cx="50%" cy="50%" label={props => `${props.name} ${props.value}%`}>
