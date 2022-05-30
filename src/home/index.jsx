@@ -14,6 +14,7 @@ import "./globals.css"
 import './index.css'
 import SectionNftGalleria from "../components/section/section-nft-galleria";
 import SectionFounder from "../components/section/section-founder";
+import SectionVideo from "../components/section/section-video";
 
 export default function Home() {
     const [door, setDoor] = React.useState(false);
@@ -35,6 +36,7 @@ export default function Home() {
                 <SectionNftGalleria/>
                 <SectionRoadmap/>
                 <SectionFounder/>
+                <SectionVideo/>
             </Layout>
         );
     }

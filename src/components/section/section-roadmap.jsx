@@ -131,7 +131,7 @@ function SectionRoadmap() {
                         >
                             CEX LISTINGS -<br/>
                             NFT PARTNERSHIPS -<br/>
-                            20000 HOLDERS -<br/>
+                            10000 HOLDERS -<br/>
                         </TimelineContent>
                     </TimelineItem>
                     <TimelineItem>
@@ -156,8 +156,7 @@ function SectionRoadmap() {
                         >
                             - NFT GALLERIA<br/>
                             - P2E<br/>
-                            - 10000 HOLDERS<br/>
-                            - RENOUNCE OWNERSHIP<br/>
+                            - 20000 HOLDERS<br/>
                         </TimelineContent>
                     </TimelineItem>
                 </Timeline>

@@ -13,11 +13,6 @@ const Typography = styled(MuiTypography)`
   font-family: 'Macondo', cursive;
 
   text-shadow: rgb(0, 0, 0) 3px 5px 2px;
-  
-  @media (max-width: 600px) {
-    background: rgba(0, 0, 0, 0.25);
-  }
-
 `
 
 function SectionTokenomics() {
@@ -66,7 +61,7 @@ function SectionTokenomics() {
                         <Typography variant={"body1"} paddingY={1}>CIRCULATING SUPPLY:<br/>
                             666 666 666 666 666</Typography>
                         <Typography variant={"body1"} paddingY={1}>BUY TAX: 0%</Typography>
-                        <Typography variant={"body1"} paddingY={1}>SELL TAX: 6%</Typography>
+                        <Typography variant={"body1"} paddingY={1}>SELL TAX: LP + 6% to Marketing/Development</Typography>
                     </Stack>
                 </Grid>
                 <Grid item xs={12} sm={6}>
