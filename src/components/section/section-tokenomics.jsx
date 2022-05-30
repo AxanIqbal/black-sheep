@@ -53,7 +53,7 @@ function SectionTokenomics() {
                 <Grid item xs={12} sm={6}>
                     <Stack >
                         <Typography variant={"body1"} paddingY={1}>$666 is a BEP20 token which started on the
-                            BINANCE SMART CHAIN blockchain MAY 26, 2021.
+                            BINANCE SMART CHAIN blockchain MAY 26, 2022.
                             The max supply is 666 trillion and one of its key
                             functionalities is its decentralized finance protocol.</Typography>
                         <Typography variant={"body1"} paddingY={1}>TOTAL SUPPLY:<br/>
