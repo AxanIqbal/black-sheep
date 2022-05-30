@@ -157,6 +157,7 @@ function SectionRoadmap() {
                             - NFT GALLERIA<br/>
                             - P2E<br/>
                             - 20000 HOLDERS<br/>
+                            - RENOUNCE OWNERSHIP<br/>
                         </TimelineContent>
                     </TimelineItem>
                 </Timeline>
