@@ -14,3 +14,7 @@ body {
   scrollbar-width: none;  /* Firefox */
 }
 
+:root {
+  color-scheme: dark;
+}
+
