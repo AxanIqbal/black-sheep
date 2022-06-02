@@ -69,16 +69,38 @@ function SectionTokenomics() {
                         <PieChart
                             data={data01}
                             startAngle={280}
-                            lineWidth={30}
-                            paddingAngle={5}
-                            label={({ dataEntry }) => `${dataEntry.title}\n${dataEntry.value}%`}
-                            labelStyle={(index) => ({
-                                fill: "whitesmoke",
-                                fontSize: '4px',
-                            })}
-                            labelPosition={69}
+                            // label={({ dataEntry }) => `${dataEntry.title}\n${dataEntry.value}%`}
+                            label={({x, y, dx, dy, dataEntry, textAnchor, dataIndex}) => {
+                                const transform = [
+                                    "rotate(-60deg) translate(-51%, 40%)",
+                                    "rotate(-27deg) translate(-22%, 29%)",
+                                    "rotate(4deg) translate(9%, -5%)",
+                                    null,
+                                ]
+                                return <text
+                                    x={x}
+                                    y={y}
+                                    dx={dx}
+                                    dy={dy}
+                                    dominantBaseline={"central"}
+                                    textAnchor={textAnchor}
+                                    style={{
+                                        fill: "whitesmoke",
+                                        fontSize: '4px',
+                                        transform: transform[dataIndex]
+                                    }}
+                                >
+                                    {dataEntry.title + ' ' + Math.round(dataEntry.percentage) + '%'}
+                                </text>
+                            }}
+                            // labelStyle={(index) => ({
+                            //     fill: "whitesmoke",
+                            //     fontSize: '4px',
+                            //
+                            // })}
+                            labelPosition={50}
                         />
-                            {/*<ResponsiveContainer height={"100%"} width={"80%"} minHeight={200} minWidth={200}>*/}
+                        {/*<ResponsiveContainer height={"100%"} width={"80%"} minHeight={200} minWidth={200}>*/}
                         {/*    <PieChart>*/}
                         {/*        <Pie data={data01} dataKey={"value"} innerRadius={"40%"} outerRadius={"70%"} nameKey={"name"} label={props => `${props.name} ${props.value}%`}>*/}
                         {/*            {data01.map((value, index) => <Cell key={index} fill={colors[index]}/>)}*/}
