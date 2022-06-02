@@ -18,29 +18,24 @@ const Typography = styled(MuiTypography)`
 function SectionTokenomics() {
     const data01 = [
         {
-            "name": "PRIVATE",
+            "name": "OPERATIONS (CEX)",
             "value": 10
         },
         {
-            "name": "TEAM",
-            "value": 3
+            "name": "STAKING",
+            "value": 10
         },
         {
             "name": "P2E",
-            "value": 2
+            "value": 10
         },
         {
-            "name": "FAIRLAUNCH",
-            "value": 50
-        },
-        {
-            "name": "LAUNCH",
-            "value": 35
+            "name": "PRESALE/LAUNCH",
+            "value": 70
         },
     ];
     const colors = [
         "rgba(47, 79, 79, 0.7)",
-        "rgba(54, 21, 14, 0.7)",
         "rgba(245, 245, 245, 0.7)",
         "rgba(119,49,231,0.7)",
         "rgba(4,191,205,0.7)"
@@ -52,7 +47,8 @@ function SectionTokenomics() {
             <Grid container>
                 <Grid item xs={12} md={6}>
                     <Stack>
-                        <Typography variant={"body1"} paddingY={1}>$666 is a BEP20 token which started on the
+                        <Typography variant={"body1"} paddingY={1}>
+                            $666 is a BEP20 token which started on the
                             BINANCE SMART CHAIN blockchain MAY 26, 2022.
                             The max supply is 666 trillion and one of its key
                             functionalities is its decentralized finance protocol.</Typography>
@@ -61,7 +57,7 @@ function SectionTokenomics() {
                         <Typography variant={"body1"} paddingY={1}>CIRCULATING SUPPLY:<br/>
                             666 666 666 666 666</Typography>
                         <Typography variant={"body1"} paddingY={1}>BUY TAX: 0%</Typography>
-                        <Typography variant={"body1"} paddingY={1}>SELL TAX: LP + 6% to Marketing/Development</Typography>
+                        <Typography variant={"body1"} paddingY={1}>SELL TAX: 6% to LP & 6% to MARKETING/DEVELOPMENT</Typography>
                     </Stack>
                 </Grid>
                 <Grid item xs={12} md={6}>
