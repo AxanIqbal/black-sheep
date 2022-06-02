@@ -1273,6 +1273,7 @@ __metadata:
     react-codepen-prefill-embed: ^0.0.2
     react-dom: ^18.0.0
     react-icons: ^4.3.1
+    react-minimal-pie-chart: ^8.3.0
     recharts: ^2.1.10
     sass: ^1.52.1
     three: ^0.140.2
@@ -2880,6 +2881,16 @@ __metadata:
   version: 1.1.0
   resolution: "react-merge-refs@npm:1.1.0"
   checksum: 90884352999002d868ab9f1bcfe3222fb0f2178ed629f1da7e98e5a9b02a2c96b4aa72800db92aabd69d2483211b4be57a2088e89a11a0b660e7ada744d4ddf7
+  languageName: node
+  linkType: hard
+
+"react-minimal-pie-chart@npm:^8.3.0":
+  version: 8.3.0
+  resolution: "react-minimal-pie-chart@npm:8.3.0"
+  peerDependencies:
+    react: ^16.8.0 || ^17.0.0 || ^18
+    react-dom: ^16.8.0 || ^17.0.0 || ^18
+  checksum: 3c5a1c444300dc838b28906818942207ee5f0f221d4e87b832291ab2ae84cfe1cb364a98204dfbee604141592149e1f9baa728f5b22cf6a1e8e45967dfca0b73
   languageName: node
   linkType: hard
 
