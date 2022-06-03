@@ -19,7 +19,7 @@ function SectionNftGalleria() {
     return (
         <Section>
             <Stack width={"100%"} alignContent={"center"}>
-                <Typography variant={"h3"} fontWeight={600} align={"center"} paddingY={8}>NFT Galleria</Typography>
+                <Typography variant={"h3"} fontWeight={600} align={"center"} paddingY={8}>NFT GALLERIA</Typography>
                 <Grid container paddingX={2} spacing={2}>
                     <Grid item sm={12} md={6} alignItems={"center"} margin={"auto"}>
                         <a href={"/galleria/"}>

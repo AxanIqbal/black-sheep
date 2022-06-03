@@ -47,7 +47,7 @@ function SectionTokenomics() {
     return (
         <Section>
             <Stack width={"100%"}>
-                <Typography variant={"h3"} paddingY={8} textAlign={"center"} align={"center"}>TOKENOMICS</Typography>
+                <Typography variant={"h3"} fontWeight={600} paddingY={8} align={'center'}>TOKENOMICS</Typography>
                 <Grid container>
                     <Grid item xs={12} md={6}>
                         <Stack width={"100%"} height={"100%"} justifyContent={"center"}>
