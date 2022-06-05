@@ -133,20 +133,34 @@ function AppBar(props) {
                                         <IconButton href={'https://t.me/BlackSheep_XYZ'}>
                                             <FaTelegram color={'darkslategrey'}/>
                                         </IconButton>
+                                        {/*<a className="e-widget no-button" href="https://gleam.io/EubmF/black-sheep"*/}
+                                        {/*   rel="nofollow">Black Sheep</a>*/}
+                                        <IconButton href={'https://gleam.io/EubmF/black-sheep'} sx={{marginTop: 2}}>
+                                            <Stack alignItems={"center"}>
+                                            <img src={"https://js.gleam.io/assets/logo-e1fa3d4725db8066f2090f30416a9852e67024908138e1d9364c93ca8a64d665.svg"} width={20} alt={"gleam"}/>
+                                            <a style={{fontSize: 15, paddingTop: 1, color: "whitesmoke"}}>Gleam</a>
+                                            </Stack>
+                                        </IconButton>
                                     </Stack>
                                 </DrawerStack>
                             </MyDrawer>
                         </Box>
-                        <Stack direction={'row'} spacing={1} sx={{display: {xs: 'none', md: 'flex'}}}>
+                        <Stack direction={'row'} spacing={1} sx={{display: {xs: 'none', md: 'flex'}}} alignItems={"center"}>
                             <IconButton href={'https://twitter.com/BlackSheep_xyz'}>
                                 <FaTwitter color={'darkslategrey'}/>
                             </IconButton>
                             <IconButton href={'https://t.me/BlackSheep_XYZ'}>
                                 <FaTelegram color={'darkslategrey'}/>
                             </IconButton>
-                            <MyButton variant={'outlined'} style={{width: "15em"}} href={"/galleria/"}
+                            <IconButton href={'https://gleam.io/EubmF/black-sheep'}>
+                                <Stack alignItems={"center"} sx={{marginTop: 2}}>
+                                    <img src={"https://js.gleam.io/assets/logo-e1fa3d4725db8066f2090f30416a9852e67024908138e1d9364c93ca8a64d665.svg"} width={20} alt={"gleam"}/>
+                                    <a style={{fontSize: 15, paddingTop: 1, color: "whitesmoke"}}>Gleam</a>
+                                </Stack>
+                            </IconButton>
+                            <MyButton variant={'outlined'} style={{width: "15em", height: "4em"}} href={"/galleria/"}
                             >NFT GALLERIA</MyButton>
-                            <MyButton variant={'outlined'} style={{width: "15em"}} href={"/game/"}>GAME</MyButton>
+                            <MyButton variant={'outlined'} style={{width: "15em", height: "4em"}} href={"/game/"}>GAME</MyButton>
                         </Stack>
                     </MyToolbar>
                 </Container>
