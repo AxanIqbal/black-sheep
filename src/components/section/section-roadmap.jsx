@@ -53,9 +53,9 @@ function SectionRoadmap() {
                             - Website<br/>
                             - Roadmap<br/>
                             - Private Sale<br/>
-                            - Fair launch Marketing<br/>
+                            - Presale marketing<br/>
                             - Audit<br/>
-                            - FAIR LAUNCH ON PINKSALE<br/>
+                            - WL presale on 3 Launchpads<br/>
                         </TimelineContent>
                     </TimelineItem>
                     <TimelineItem>

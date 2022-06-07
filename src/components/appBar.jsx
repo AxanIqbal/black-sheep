@@ -158,9 +158,9 @@ function AppBar(props) {
                                     <a style={{fontSize: 15, paddingTop: 1, color: "whitesmoke"}}>Gleam</a>
                                 </Stack>
                             </IconButton>
-                            <MyButton variant={'outlined'} style={{width: "15em", height: "4em"}} href={"/galleria/"}
+                            <MyButton variant={'outlined'} style={{width: "15em", height: "4em", padding: "1em 0"}} href={"/galleria/"}
                             >NFT GALLERIA</MyButton>
-                            <MyButton variant={'outlined'} style={{width: "15em", height: "4em"}} href={"/game/"}>GAME</MyButton>
+                            <MyButton variant={'outlined'} style={{width: "15em", height: "4em", padding: "1em 0"}} href={"/game/"}>GAME</MyButton>
                         </Stack>
                     </MyToolbar>
                 </Container>
