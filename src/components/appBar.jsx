@@ -15,7 +15,7 @@ import {
 import {cloneElement, useState} from "react";
 import Button from "./button";
 import {Divide as Hamburger} from 'hamburger-react';
-import {FaTelegram, FaTwitter} from "react-icons/fa";
+import {FaEnvelope, FaTelegram, FaTwitter, FaYoutube} from "react-icons/fa";
 import Logo from "../favicon.ico"
 
 const Heading = styled(Typography)`
@@ -126,47 +126,62 @@ function AppBar(props) {
                                                   href={"/game/"}>GAME</MyButton>
                                     </Stack>
                                     <Divider color={'darkslategrey'}/>
-                                    <Stack direction={"row"} width={"100"} alignItems={"center"} justifyContent={"center"}>
-                                        <IconButton href={'https://twitter.com/BlackSheep_xyz'}>
-                                            <FaTwitter color={'darkslategrey'}/>
-                                        </IconButton>
-                                        <IconButton href={'https://t.me/BlackSheep_XYZ'}>
-                                            <FaTelegram color={'darkslategrey'}/>
-                                        </IconButton>
-                                        {/*<a className="e-widget no-button" href="https://gleam.io/EubmF/black-sheep"*/}
-                                        {/*   rel="nofollow">Black Sheep</a>*/}
+                                    <Stack direction={"row"} width={"100"} alignItems={"center"}
+                                           justifyContent={"center"}>
+                                        <SocialButtons/>
                                         <IconButton href={'https://gleam.io/EubmF/black-sheep'} sx={{marginTop: 2}}>
                                             <Stack alignItems={"center"}>
-                                            <img src={"https://js.gleam.io/assets/logo-e1fa3d4725db8066f2090f30416a9852e67024908138e1d9364c93ca8a64d665.svg"} width={20} alt={"gleam"}/>
-                                            <a style={{fontSize: 15, paddingTop: 1, color: "whitesmoke"}}>Gleam</a>
+                                                <img
+                                                    src={"https://js.gleam.io/assets/logo-e1fa3d4725db8066f2090f30416a9852e67024908138e1d9364c93ca8a64d665.svg"}
+                                                    width={20} alt={"gleam"}/>
+                                                <a style={{fontSize: 15, paddingTop: 1, color: "whitesmoke"}}>Gleam</a>
                                             </Stack>
                                         </IconButton>
                                     </Stack>
                                 </DrawerStack>
                             </MyDrawer>
                         </Box>
-                        <Stack direction={'row'} spacing={1} sx={{display: {xs: 'none', md: 'flex'}}} alignItems={"center"}>
-                            <IconButton href={'https://twitter.com/BlackSheep_xyz'}>
-                                <FaTwitter color={'darkslategrey'}/>
-                            </IconButton>
-                            <IconButton href={'https://t.me/BlackSheep_XYZ'}>
-                                <FaTelegram color={'darkslategrey'}/>
-                            </IconButton>
+                        <Stack direction={'row'} spacing={1} sx={{display: {xs: 'none', md: 'flex'}}}
+                               alignItems={"center"}>
+                            <SocialButtons/>
                             <IconButton href={'https://gleam.io/EubmF/black-sheep'}>
                                 <Stack alignItems={"center"} sx={{marginTop: 2}}>
-                                    <img src={"https://js.gleam.io/assets/logo-e1fa3d4725db8066f2090f30416a9852e67024908138e1d9364c93ca8a64d665.svg"} width={20} alt={"gleam"}/>
+                                    <img
+                                        src={"https://js.gleam.io/assets/logo-e1fa3d4725db8066f2090f30416a9852e67024908138e1d9364c93ca8a64d665.svg"}
+                                        width={20} alt={"gleam"}/>
                                     <a style={{fontSize: 15, paddingTop: 1, color: "whitesmoke"}}>Gleam</a>
                                 </Stack>
                             </IconButton>
-                            <MyButton variant={'outlined'} style={{width: "15em", height: "4em", padding: "1em 0"}} href={"/galleria/"}
+                            <MyButton variant={'outlined'} style={{width: "15em", height: "4em", padding: "1em 0"}}
+                                      href={"/galleria/"}
                             >NFT GALLERIA</MyButton>
-                            <MyButton variant={'outlined'} style={{width: "15em", height: "4em", padding: "1em 0"}} href={"/game/"}>GAME</MyButton>
+                            <MyButton variant={'outlined'} style={{width: "15em", height: "4em", padding: "1em 0"}}
+                                      href={"/game/"}>GAME</MyButton>
                         </Stack>
                     </MyToolbar>
                 </Container>
             </CustomAppBar>
         </ElevationScroll>
     );
+}
+
+function SocialButtons() {
+    return (
+        <>
+            <IconButton href={'https://twitter.com/BlackSheep_xyz'}>
+                <FaTwitter color={'darkslategrey'}/>
+            </IconButton>
+            <IconButton href={'https://t.me/BlackSheep_XYZ'}>
+                <FaTelegram color={'darkslategrey'}/>
+            </IconButton>
+            <IconButton href={'https://youtube.com/channel/UC9kdD7cvS7WKoZud9YilOhw'}>
+                <FaYoutube color={'darkslategrey'}/>
+            </IconButton>
+            <IconButton href={'mailto:blacksheep.eth@gmail.com'}>
+                <FaEnvelope color={'darkslategrey'}/>
+            </IconButton>
+        </>
+    )
 }
 
 export default AppBar;
