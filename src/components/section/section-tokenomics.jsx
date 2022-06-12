@@ -30,12 +30,12 @@ const CustomTooltip = ({ active, payload }) => {
 
 function SectionTokenomics() {
     const colors = [
-        "rgba(245, 245, 245, 0.7)",
-        "rgba(47, 79, 79, 0.7)",
         "rgba(255,199,58,0.7)",
+        "rgba(47, 79, 79, 0.7)",
+        "rgba(245, 245, 245, 0.7)",
         "rgba(4,191,205,0.7)",
         "rgba(119,49,231,0.7)",
-        "rgba(54, 21, 14, 0.7)"
+        "rgba(200,0,0,0.7)"
     ]
     const data01 = [
         {
@@ -87,7 +87,7 @@ function SectionTokenomics() {
                             </Typography>
                             <Typography variant={"body1"} paddingY={1}>
                                 CIRCULATING SUPPLY:<br/>
-                                666 666 666 666 666
+                                425 800 000 000 000,00
                             </Typography>
                             <Typography variant={"body1"} paddingY={1}>
                                 BUY TAX: 0%
