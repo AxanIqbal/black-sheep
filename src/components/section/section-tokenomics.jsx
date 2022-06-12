@@ -30,31 +30,43 @@ const CustomTooltip = ({ active, payload }) => {
 
 function SectionTokenomics() {
     const colors = [
-        "rgba(47, 79, 79, 0.7)",
         "rgba(245, 245, 245, 0.7)",
+        "rgba(47, 79, 79, 0.7)",
+        "rgba(255,199,58,0.7)",
+        "rgba(4,191,205,0.7)",
         "rgba(119,49,231,0.7)",
-        "rgba(4,191,205,0.7)"
+        "rgba(54, 21, 14, 0.7)"
     ]
     const data01 = [
         {
-            "title": "OPERATIONS (CEX)",
+            "title": "OPERATIONS",
             "value": 10,
             "fill": colors[0]
         },
         {
-            "title": "STAKING",
-            "value": 10,
+            "title": "TOKEN SALES",
+            "value": 23.9,
             "fill": colors[1]
         },
         {
-            "title": "P2E",
+            "title": "LIQUIDITY",
             "value": 10,
             "fill": colors[2]
         },
         {
-            "title": "PRESALE/LAUNCH",
-            "value": 70,
+            "title": "BURN",
+            "value": 36.1,
             "fill": colors[3]
+        },
+        {
+            "title": "ECOSYSTEM",
+            "value": 15,
+            "fill": colors[4]
+        },
+        {
+            "title": "MARKETING",
+            "value": 5,
+            "fill": colors[5]
         },
     ];
     return (
@@ -65,17 +77,24 @@ function SectionTokenomics() {
                     <Grid item xs={12} md={6}>
                         <Stack width={"100%"} height={"100%"} justifyContent={"center"}>
                             <Typography variant={"body1"} paddingY={1}>
-                                $666 is a BEP20 token which started on the
-                                BINANCE SMART CHAIN blockchain MAY 26, 2022.
+                                $BINANCE SMART CHAIN blockchain on JUNE, 2022.
                                 The max supply is 666 trillion and one of its key
-                                functionalities is its decentralized finance protocol.</Typography>
-                            <Typography variant={"body1"} paddingY={1}>TOTAL SUPPLY:<br/>
-                                666 666 666 666 666</Typography>
-                            <Typography variant={"body1"} paddingY={1}>CIRCULATING SUPPLY:<br/>
-                                666 666 666 666 666</Typography>
-                            <Typography variant={"body1"} paddingY={1}>BUY TAX: 0%</Typography>
-                            <Typography variant={"body1"} paddingY={1}>SELL TAX: 6% to LP & 6% to
-                                MARKETING/DEVELOPMENT</Typography>
+                                functionalities is its decentralised finance protocol.
+                            </Typography>
+                            <Typography variant={"body1"} paddingY={1}>
+                                TOTAL SUPPLY:<br/>
+                                666 666 666 666 666
+                            </Typography>
+                            <Typography variant={"body1"} paddingY={1}>
+                                CIRCULATING SUPPLY:<br/>
+                                666 666 666 666 666
+                            </Typography>
+                            <Typography variant={"body1"} paddingY={1}>
+                                BUY TAX: 0%
+                            </Typography>
+                            <Typography variant={"body1"} paddingY={1}>
+                                SELL TAX: 6% to LP & 6% to MARKETING/DEVELOPMENT
+                            </Typography>
                         </Stack>
                     </Grid>
                     <Grid item xs={12} md={6}>
@@ -124,7 +143,6 @@ function SectionTokenomics() {
                         {/*/>*/}
                         <ResponsiveContainer height={"100%"} width={"100%"} minHeight={600} >
                             <PieChart>
-
                                 <Pie
                                     data={data01}
                                     dataKey="value"
