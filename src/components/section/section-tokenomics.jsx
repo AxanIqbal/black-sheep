@@ -17,7 +17,7 @@ const Typography = styled(MuiTypography)`
 
 const CustomTooltip = ({ active, payload }) => {
     console.log(active,payload)
-    if (active && payload && payload.length) {
+    if (payload && payload.length) {
         return (
             <Box>
                 <Typography>{`${payload[0].name}  ${payload[0].value}%`}</Typography>
