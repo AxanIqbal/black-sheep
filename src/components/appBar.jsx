@@ -123,7 +123,7 @@ function AppBar(props) {
                                         <MyButton variant={'outlined'} style={{width: "15em"}} href={"/galleria/"}>NFT
                                             GALLERIA</MyButton>
                                         <MyButton variant={'outlined'} style={{width: "15em"}}
-                                                  href={"/game/"}>GAME</MyButton>
+                                                  href={"/miner/"}>MINER</MyButton>
                                     </Stack>
                                     <Divider color={'darkslategrey'}/>
                                     <Stack direction={"row"} width={"100"} alignItems={"center"}
@@ -156,7 +156,7 @@ function AppBar(props) {
                                       href={"/galleria/"}
                             >NFT GALLERIA</MyButton>
                             <MyButton variant={'outlined'} style={{width: "15em", height: "4em", padding: "1em 0"}}
-                                      href={"/game/"}>GAME</MyButton>
+                                      href={"/miner/"}>MINER</MyButton>
                         </Stack>
                     </MyToolbar>
                 </Container>
