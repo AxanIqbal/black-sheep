@@ -57,7 +57,7 @@ function HeroSection() {
     return (
         <Section>
             <HeroImageStyled src={Heroimage} alt={"Hero image"}/>
-            <MyButton backcolor={"#5363FF"}>
+            <MyButton backcolor={"#5363FF"} href={"https://t.me/BlackSheep_XYZ"}>
                     Join Now
             </MyButton>
         </Section>

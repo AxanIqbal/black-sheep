@@ -15,7 +15,7 @@ import {
 import {cloneElement, useState} from "react";
 import Button from "./button";
 import {Divide as Hamburger} from 'hamburger-react';
-import {FaEnvelope, FaTelegram, FaTwitter, FaYoutube} from "react-icons/fa";
+import {FaEnvelope, FaTelegram, FaTwitter, FaYoutube, FaDiscord,FaMedium} from "react-icons/fa";
 import Logo from "../favicon.ico"
 
 const Heading = styled(Typography)`
@@ -129,14 +129,6 @@ function AppBar(props) {
                                     <Stack direction={"row"} width={"100"} alignItems={"center"}
                                            justifyContent={"center"}>
                                         <SocialButtons/>
-                                        <IconButton href={'https://gleam.io/EubmF/black-sheep'} sx={{marginTop: 2}}>
-                                            <Stack alignItems={"center"}>
-                                                <img
-                                                    src={"https://js.gleam.io/assets/logo-e1fa3d4725db8066f2090f30416a9852e67024908138e1d9364c93ca8a64d665.svg"}
-                                                    width={20} alt={"gleam"}/>
-                                                <a style={{fontSize: 15, paddingTop: 1, color: "whitesmoke"}}>Gleam</a>
-                                            </Stack>
-                                        </IconButton>
                                     </Stack>
                                 </DrawerStack>
                             </MyDrawer>
@@ -144,14 +136,6 @@ function AppBar(props) {
                         <Stack direction={'row'} spacing={1} sx={{display: {xs: 'none', md: 'flex'}}}
                                alignItems={"center"}>
                             <SocialButtons/>
-                            <IconButton href={'https://gleam.io/EubmF/black-sheep'}>
-                                <Stack alignItems={"center"} sx={{marginTop: 2}}>
-                                    <img
-                                        src={"https://js.gleam.io/assets/logo-e1fa3d4725db8066f2090f30416a9852e67024908138e1d9364c93ca8a64d665.svg"}
-                                        width={20} alt={"gleam"}/>
-                                    <a style={{fontSize: 15, paddingTop: 1, color: "whitesmoke"}}>Gleam</a>
-                                </Stack>
-                            </IconButton>
                             <MyButton variant={'outlined'} style={{width: "15em", height: "4em", padding: "1em 0"}}
                                       href={"/galleria/"}
                             >NFT GALLERIA</MyButton>
@@ -167,20 +151,26 @@ function AppBar(props) {
 
 function SocialButtons() {
     return (
-        <>
+        <Stack direction={"row"}>
             <IconButton href={'https://twitter.com/BlackSheep_xyz'}>
                 <FaTwitter color={'darkslategrey'}/>
             </IconButton>
             <IconButton href={'https://t.me/BlackSheep_XYZ'}>
                 <FaTelegram color={'darkslategrey'}/>
             </IconButton>
+            <IconButton href={"https://discord.gg/uDEKqbGq"}>
+                <FaDiscord color={'darkslategrey'} />
+            </IconButton>
             <IconButton href={'https://youtube.com/channel/UC9kdD7cvS7WKoZud9YilOhw'}>
                 <FaYoutube color={'darkslategrey'}/>
+            </IconButton>
+            <IconButton href={"https://medium.com/@blacksheep.eth"}>
+                <FaMedium color={'darkslategrey'}/>
             </IconButton>
             <IconButton href={'mailto:blacksheep.eth@gmail.com'}>
                 <FaEnvelope color={'darkslategrey'}/>
             </IconButton>
-        </>
+        </Stack>
     )
 }
 
