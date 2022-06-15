@@ -151,7 +151,7 @@ function AppBar(props) {
 
 function SocialButtons() {
     return (
-        <Stack direction={"row"}>
+        <>
             <IconButton href={'https://twitter.com/BlackSheep_xyz'}>
                 <FaTwitter color={'darkslategrey'}/>
             </IconButton>
@@ -170,7 +170,7 @@ function SocialButtons() {
             <IconButton href={'mailto:blacksheep.eth@gmail.com'}>
                 <FaEnvelope color={'darkslategrey'}/>
             </IconButton>
-        </Stack>
+        </>
     )
 }
 
