@@ -26,7 +26,7 @@ function SectionButtons() {
                     <Grid container spacing={2}>
                         <Grid item xs={12} sm={6}>
                             <Button variant={'outlined'}
-                                    href={'#'}>PANCAKESWAP</Button>
+                                    href={'https://pancakeswap.finance/swap?outputCurrency=0x0d3326f49e8ACf72942dC0873b3a522797557706'}>PANCAKESWAP</Button>
                         </Grid>
                         <Grid item xs={12} sm={6}>
                             <Button variant={'outlined'}

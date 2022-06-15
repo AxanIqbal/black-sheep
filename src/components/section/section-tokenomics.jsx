@@ -95,6 +95,9 @@ function SectionTokenomics() {
                             <Typography variant={"body1"} paddingY={1}>
                                 SELL TAX: 6% to LP & 6% to MARKETING/DEVELOPMENT
                             </Typography>
+                            <Typography variant={"body1"} paddingY={1}>
+                                Token Contract: 0x0d3326f49e8ACf72942dC0873b3a522797557706
+                            </Typography>
                         </Stack>
                     </Grid>
                     <Grid item xs={12} md={6}>
