@@ -45,6 +45,7 @@ const roadMapData = {
         "Shill2Earn v1 App Release (IOS/ANDROID)",
         "7000 Holders",
         "NFTs",
+        "P2E"
     ]
 }
 
