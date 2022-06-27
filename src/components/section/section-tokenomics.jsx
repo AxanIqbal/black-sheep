@@ -77,7 +77,7 @@ function SectionTokenomics() {
                     <Grid item xs={12} md={6}>
                         <Stack width={"100%"} height={"100%"} justifyContent={"center"}>
                             <Typography variant={"body1"} paddingY={1}>
-                                $BINANCE SMART CHAIN blockchain on JUNE, 2022.
+                                BINANCE SMART CHAIN Blockchain on JUNE, 2022.
                                 The max supply is 666 trillion and one of its key
                                 functionalities is its decentralised finance protocol.
                             </Typography>
@@ -87,17 +87,17 @@ function SectionTokenomics() {
                             </Typography>
                             <Typography variant={"body1"} paddingY={1}>
                                 CIRCULATING SUPPLY:<br/>
-                                425 800 000 000 000,00
+                                425 800 000 000 000
                             </Typography>
                             <Typography variant={"body1"} paddingY={1}>
-                                BUY TAX: 0%
+                                BUY TAX: 7%
                             </Typography>
                             <Typography variant={"body1"} paddingY={1}>
-                                SELL TAX: 6% to LP & 6% to MARKETING/DEVELOPMENT
+                                SELL TAX: 7%
                             </Typography>
-                            <Typography variant={"body1"} paddingY={1}>
-                                Token Contract: 0x0d3326f49e8ACf72942dC0873b3a522797557706
-                            </Typography>
+                            {/*<Typography variant={"body1"} paddingY={1}>*/}
+                            {/*    Token Contract: 0x0d3326f49e8ACf72942dC0873b3a522797557706*/}
+                            {/*</Typography>*/}
                         </Stack>
                     </Grid>
                     <Grid item xs={12} md={6}>

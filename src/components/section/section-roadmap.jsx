@@ -10,6 +10,7 @@ import {
     TimelineOppositeContent,
     TimelineSeparator
 } from "@mui/lab";
+import {map, keys} from 'lodash'
 
 const Typography = styled(MuiTypography)`
   color: whitesmoke;
@@ -20,10 +21,34 @@ const TimelineConnector = styled(MuiTimelineConnector)`
   background-image: linear-gradient(to right,#04bfcd , #7731e7 );
 `
 
-const Image = styled.img`
-  background-size: cover;
-  width: 100%;
-`
+const roadMapData = {
+    development: [
+        "Whitepaper 2.0",
+        "Website 2.0",
+        "Roadmap 2.0",
+        "Migration",
+        "Presale Marketing",
+        "WL presale on Pinksale",
+    ],
+    growth: [
+        "Miner/Staking Deploy",
+        "Shill2Earn Teaser Release",
+        "3000 Holders",
+        "Listings",
+    ],
+    expansion: [
+        "CEX LISTINGS",
+        "NFT PARTNERSHIPS",
+        "20000 HOLDERS",
+    ],
+    utilities: [
+        "Shill2Earn v1 App Release (IOS/ANDROID)",
+        "7000 Holders",
+        "NFTs",
+    ]
+}
+
+const roadMapDataHead = keys(roadMapData)
 
 function SectionRoadmap() {
     return (
@@ -31,135 +56,34 @@ function SectionRoadmap() {
             <Stack sx={{width: '100%'}}>
                 <Typography variant={"h3"} fontWeight={600} paddingY={8} align={'center'}>ROADMAP</Typography>
                 <Timeline position={"alternate"}>
-                    <TimelineItem>
-                        <TimelineOppositeContent
-                            fontFamily={"'Macondo', cursive"}
-                            sx={{ m: 'auto 0' }}
-                        >
-                            <Typography variant={"h6"} sx={{fontWeight: "bold", fontSize: {xs: 16, sm: 20} }} textTransform={"uppercase"}>Development</Typography>
-                        </TimelineOppositeContent>
-                        <TimelineSeparator>
-                            <TimelineConnector/>
-                            <TimelineDot sx={{
-                                backgroundColor: "#04bfcd"
-                            }}/>
-                            <TimelineConnector />
-                        </TimelineSeparator>
-                        <TimelineContent
-                            fontFamily={"'Macondo', cursive"}
-                            textTransform={"uppercase"}
-                        >
-                            - Whitepaper<br/>
-                            - Website<br/>
-                            - Roadmap<br/>
-                            - Private Sale<br/>
-                            - Presale marketing<br/>
-                            - Audit<br/>
-                            - WL presale on 3 Launchpads<br/>
-                        </TimelineContent>
-                    </TimelineItem>
-                    <TimelineItem>
-                        <TimelineOppositeContent
-                            sx={{ m: 'auto 0', fontWeight: "bold" }}
-                            variant={"h6"}
-                            fontFamily={"'Macondo', cursive"}
-                            textTransform={"uppercase"}
-                        >
-                            Launch
-                        </TimelineOppositeContent>
-                        <TimelineSeparator>
-                            <TimelineConnector />
-                            <TimelineDot sx={{
-                                backgroundColor: "#04bfcd"
-                            }}/>
-                            <TimelineConnector />
-                        </TimelineSeparator>
-                        <TimelineContent
-                            fontFamily={"'Macondo', cursive"}
-                            textTransform={"uppercase"}
-                        >
-                            1000 HOLDERS -<br/>
-                            LAUNCH MARKETING -<br/>
-                            LISTINGS -<br/>
-                            2000 TELEGRAM MEMBERS -<br/>
-                            3000 HOLDERS -<br/>
-                        </TimelineContent>
-                    </TimelineItem>
-                    <TimelineItem>
-                        <TimelineOppositeContent
-                            sx={{ m: 'auto 0', fontWeight: "bold" }}
-                            variant={"h6"}
-                            fontFamily={"'Macondo', cursive"}
-                            textTransform={"uppercase"}
-                        >
-                            GROWTH
-                        </TimelineOppositeContent>
-                        <TimelineSeparator>
-                            <TimelineConnector />
-                            <TimelineDot sx={{
-                                backgroundColor: "#04bfcd"
-                            }}/>
-                            <TimelineConnector />
-                        </TimelineSeparator>
-                        <TimelineContent
-                            fontFamily={"'Macondo', cursive"}
-                        >
-                            - NFT GALLERIA (PoC)<br/>
-                            - P2E (PoC)<br/>
-                            - 7000 HOLDERS<br/>
-                        </TimelineContent>
-                    </TimelineItem>
-                    <TimelineItem>
-                        <TimelineOppositeContent
-                            sx={{ m: 'auto 0', fontWeight: "bold" }}
-                            variant={"h6"}
-                            fontFamily={"'Macondo', cursive"}
-                            textTransform={"uppercase"}
-                        >
-                            EXPANSION
-                        </TimelineOppositeContent>
-                        <TimelineSeparator>
-                            <TimelineConnector />
-                            <TimelineDot sx={{
-                                backgroundColor: "#04bfcd"
-                            }}/>
-                            <TimelineConnector />
-                        </TimelineSeparator>
-                        <TimelineContent
-                            fontFamily={"'Macondo', cursive"}
-                            textTransform={"uppercase"}
-                        >
-                            CEX LISTINGS -<br/>
-                            NFT PARTNERSHIPS -<br/>
-                            10000 HOLDERS -<br/>
-                        </TimelineContent>
-                    </TimelineItem>
-                    <TimelineItem>
-                        <TimelineOppositeContent
-                            sx={{ m: 'auto 0', fontWeight: "bold" }}
-                            variant={"h6"}
-                            fontFamily={"'Macondo', cursive"}
-                            textTransform={"uppercase"}
-                        >
-                            UTILITIES
-                        </TimelineOppositeContent>
-                        <TimelineSeparator>
-                            <TimelineConnector />
-                            <TimelineDot sx={{
-                                backgroundColor: "#04bfcd"
-                            }}/>
-                            <TimelineConnector />
-                        </TimelineSeparator>
-                        <TimelineContent
-                            fontFamily={"'Macondo', cursive"}
-                            textTransform={"uppercase"}
-                        >
-                            - NFT GALLERIA<br/>
-                            - P2E<br/>
-                            - 20000 HOLDERS<br/>
-                            - RENOUNCE OWNERSHIP<br/>
-                        </TimelineContent>
-                    </TimelineItem>
+                    {map(roadMapData, (value,key)=>(
+                        <TimelineItem>
+                            <TimelineOppositeContent
+                                fontFamily={"'Macondo', cursive"}
+                                sx={{ m: 'auto 0' }}
+                            >
+                                <Typography
+                                    variant={"h6"}
+                                    sx={{fontWeight: "bold", fontSize: {xs: 16, sm: 20} }}
+                                    textTransform={"uppercase"}>
+                                    {key}
+                                </Typography>
+                            </TimelineOppositeContent>
+                            <TimelineSeparator>
+                                <TimelineConnector/>
+                                <TimelineDot sx={{
+                                    backgroundColor: "#04bfcd"
+                                }}/>
+                                <TimelineConnector />
+                            </TimelineSeparator>
+                            <TimelineContent
+                                fontFamily={"'Macondo', cursive"}
+                                textTransform={"uppercase"}
+                            >
+                                {value.map(e=><span>{roadMapDataHead.indexOf(key) % 2 === 0 && "- "}{e}{roadMapDataHead.indexOf(key) % 2 === 1 && " -"}<br/></span>)}
+                            </TimelineContent>
+                        </TimelineItem>
+                        ))}
                 </Timeline>
             </Stack>
         </Section>
