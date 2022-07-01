@@ -36,7 +36,8 @@ const MyButton = styled(Button)`
 
   @media (max-width: 800px) {
     padding: 0;
-    font-size: 1.2rem;
+    font-size: 1rem;
+    width: 30%;
 
     & > span {
       margin: 0;

@@ -33,11 +33,11 @@ function SectionNftGalleria() {
                             ENTER THE REALM OF GALLERIA, VISIT DIFFERENT LANDS AND
                             PURCHASE THE NFTS.
                         </Typography>
-                        <Typography variant={"h5"} fontWeight={600} paddingY={2}>666 EXCLUSIVE NFTS IN 360 COLLECTIONS</Typography>
+                        <Typography variant={"h5"} fontWeight={600} paddingY={2}>SHEEPLE EXCLUSIVE NFTS IN 360 COLLECTIONS</Typography>
                         <Typography variant={"body1"}>
-                            666 REPRESENTS THE NEW WORLD ORDER, WHERE YOU ARE JUST A
+                            SHEEPLE REPRESENTS THE NEW WORLD ORDER, WHERE YOU ARE JUST A
                             GRAIN IN THE DESERT.<br/>
-                            666 WILL BE AVAILABLE ON OPENSEA AND WILL GIVE YOU ACCESS
+                            SHEEPLE WILL BE AVAILABLE ON OPENSEA AND WILL GIVE YOU ACCESS
                             TO PRIVATE SECRET CLUB.
                         </Typography>
                     </Grid>

@@ -90,10 +90,10 @@ function SectionTokenomics() {
                                 425 800 000 000 000
                             </Typography>
                             <Typography variant={"body1"} paddingY={1}>
-                                BUY TAX: 7%
+                                BUY TAX: 9%
                             </Typography>
                             <Typography variant={"body1"} paddingY={1}>
-                                SELL TAX: 7%
+                                SELL TAX: 9%
                             </Typography>
                             {/*<Typography variant={"body1"} paddingY={1}>*/}
                             {/*    Token Contract: 0x0d3326f49e8ACf72942dC0873b3a522797557706*/}
