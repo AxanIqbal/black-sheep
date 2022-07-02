@@ -64,7 +64,7 @@ function SectionTokenomics() {
             "fill": colors[4]
         },
         {
-            "title": "MARKETING",
+            "title": "PRIVATE",
             "value": 5,
             "fill": colors[5]
         },
@@ -77,17 +77,21 @@ function SectionTokenomics() {
                     <Grid item xs={12} md={6}>
                         <Stack width={"100%"} height={"100%"} justifyContent={"center"}>
                             <Typography variant={"body1"} paddingY={1}>
-                                BINANCE SMART CHAIN Blockchain on JUNE, 2022.
-                                The max supply is 666 trillion and one of its key
-                                functionalities is its decentralised finance protocol.
+                                $SHEEPLE is a BINANCE SMART CHAIN TOKEN deployed on JUNE, 2022
+                                The max supply is 1 Quadrillion and one of its key functionalities is
+                                its decentralised finance protocol.
                             </Typography>
                             <Typography variant={"body1"} paddingY={1}>
                                 TOTAL SUPPLY:<br/>
-                                666 666 666 666 666
+                                1 QUADRILLION $SHEEPLE
+                            </Typography>
+                            <Typography variant={"body1"} paddingY={1}>
+                                BURN:<br/>
+                                36.1% MANUALLY BEFORE LAUNCH
                             </Typography>
                             <Typography variant={"body1"} paddingY={1}>
                                 CIRCULATING SUPPLY:<br/>
-                                425 800 000 000 000
+                                639 000 000 000 000
                             </Typography>
                             <Typography variant={"body1"} paddingY={1}>
                                 BUY TAX: 9%
