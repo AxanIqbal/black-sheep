@@ -35,17 +35,21 @@ const roadMapData = {
         "Shill2Earn Teaser Release",
         "3000 Holders",
         "Listings",
+        "Guerrilla Marketing\n" +
+        "(Hong Kong, Shanghai, Belgium, Paris, London and Singapore)",
     ],
     expansion: [
         "CEX LISTINGS",
         "NFT PARTNERSHIPS",
         "20000 HOLDERS",
+        "SWAP",
     ],
     utilities: [
         "Shill2Earn v1 App Release (IOS/ANDROID)",
         "7000 Holders",
         "NFTs",
-        "P2E"
+        "P2E",
+        "Celebs Endorsement",
     ]
 }
 
@@ -79,7 +83,7 @@ function SectionRoadmap() {
                             </TimelineSeparator>
                             <TimelineContent
                                 fontFamily={"'Macondo', cursive"}
-                                textTransform={"uppercase"}
+                                // textTransform={"uppercase"}
                             >
                                 {value.map(e=><span>{roadMapDataHead.indexOf(key) % 2 === 0 && "- "}{e}{roadMapDataHead.indexOf(key) % 2 === 1 && " -"}<br/></span>)}
                             </TimelineContent>
