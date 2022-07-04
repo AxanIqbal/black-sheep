@@ -167,7 +167,7 @@ function SocialButtons() {
             <IconButton href={"https://medium.com/@blacksheep.eth"}>
                 <FaMedium color={'darkslategrey'}/>
             </IconButton>
-            <IconButton href={'mailto:blacksheep.eth@gmail.com'}>
+            <IconButton href={'mailto:support@black-sheep.xyz'}>
                 <FaEnvelope color={'darkslategrey'}/>
             </IconButton>
         </>
