@@ -1,8 +1,4 @@
-import React, {Suspense} from 'react';
-import {Canvas} from '@react-three/fiber'
-import SpaceThreejs from "../components/section/space-threejs";
-import Button from "../components/button";
-import {Box} from "@mui/material";
+import React from 'react';
 import HeroSection from "../components/section/hero-section";
 import SectionButtons from "../components/section/section-buttons";
 import SectionTokenomics from "../components/section/section-tokenomics";
@@ -17,53 +13,53 @@ import SectionFounder from "../components/section/section-founder";
 import SectionVideo from "../components/section/section-video";
 
 export default function Home() {
-    const [door, setDoor] = React.useState(false);
-    const openDoor = React.useCallback(
-        () => {
-            setDoor(true);
-        },
-        [],
-    );
+    // const [door, setDoor] = React.useState(false);
+    // const openDoor = React.useCallback(
+    //     () => {
+    //         setDoor(true);
+    //     },
+    //     [],
+    // );
 
-    if (door) {
-        return (
-            <Layout>
-                <HeroSection/>
-                <SectionButtons/>
-                <SectionWhyBlackSheep/>
-                <SectionTokenomics/>
-                <SectionP2e/>
-                <SectionNftGalleria/>
-                <SectionRoadmap/>
-                <SectionFounder/>
-                <SectionVideo/>
-            </Layout>
-        );
-    }
-
+    // if (door) {
     return (
-        <>
-            <Box style={{position: "relative"}}>
-                <Canvas id={'canvas-space'}>
-                    <Suspense fallback={null}>
-                        <SpaceThreejs/>
-                    </Suspense>
+        <Layout>
+            <HeroSection/>
+            <SectionButtons/>
+            <SectionWhyBlackSheep/>
+            <SectionTokenomics/>
+            <SectionP2e/>
+            <SectionNftGalleria/>
+            <SectionRoadmap/>
+            <SectionFounder/>
+            <SectionVideo/>
+        </Layout>
+    );
+    // }
 
-                </Canvas>
-                <Button
-                    variant={"contained"}
-                    backcolor={"darkslategrey"}
-                    onClick={openDoor}
-                    sx={{
-                        width: "18em",
-                        position: "absolute",
-                        left: "50%",
-                        marginLeft: "-9em",
-                        bottom: "10em",
-                    }}>
-                    Open the Door
-                </Button>
-            </Box>
-        </>
-    )
+    // return (
+    //     <>
+    //         <Box style={{position: "relative"}}>
+    //             <Canvas id={'canvas-space'}>
+    //                 <Suspense fallback={null}>
+    //                     <SpaceThreejs/>
+    //                 </Suspense>
+    //
+    //             </Canvas>
+    //             <Button
+    //                 variant={"contained"}
+    //                 backcolor={"darkslategrey"}
+    //                 onClick={openDoor}
+    //                 sx={{
+    //                     width: "18em",
+    //                     position: "absolute",
+    //                     left: "50%",
+    //                     marginLeft: "-9em",
+    //                     bottom: "10em",
+    //                 }}>
+    //                 Open the Door
+    //             </Button>
+    //         </Box>
+    //     </>
+    // )
 }
