@@ -29,7 +29,10 @@ function SectionFounder() {
         <Section>
             <Stack width={"100%"} alignItems={"center"}>
                 <Typography variant={"h3"} fontWeight={600} align={"center"} paddingY={8}>FOUNDER</Typography>
-                <HeroImageStyled src={Founder} alt={"Founder image"}/>
+                <a href={'https://www.linkedin.com/in/jaydoon-moon-14760a244/'}>
+                    <HeroImageStyled src={Founder} alt={"Founder image"}/>
+                </a>
+
                 {/*<Container>*/}
                 {/*    <Typography variant={"h4"} padding={3}>Black Sheep Family</Typography>*/}
                 {/*</Container>*/}
