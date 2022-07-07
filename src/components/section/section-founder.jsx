@@ -1,7 +1,7 @@
 import React from 'react';
 import Section from "../section";
 import styled from "@emotion/styled";
-import Founder from "../../assets/black sheep.png";
+import Founder from "../../assets/founder.png";
 import {Container as MuiContainer, Stack, Typography as MuiTypography} from "@mui/material";
 
 const HeroImageStyled = styled.img`
@@ -28,11 +28,11 @@ function SectionFounder() {
     return (
         <Section>
             <Stack width={"100%"} alignItems={"center"}>
-                {/*<Typography variant={"h3"} fontWeight={600} align={"center"} paddingY={8}>FOUNDER</Typography>*/}
+                <Typography variant={"h3"} fontWeight={600} align={"center"} paddingY={8}>FOUNDER</Typography>
                 <HeroImageStyled src={Founder} alt={"Founder image"}/>
-                <Container>
-                    <Typography variant={"h4"} padding={3}>Black Sheep Family</Typography>
-                </Container>
+                {/*<Container>*/}
+                {/*    <Typography variant={"h4"} padding={3}>Black Sheep Family</Typography>*/}
+                {/*</Container>*/}
             </Stack>
         </Section>
     );

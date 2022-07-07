@@ -20,8 +20,8 @@ export default function Home() {
     //     },
     //     [],
     // );
-
     // if (door) {
+
     return (
         <Layout>
             <HeroSection/>
@@ -35,8 +35,8 @@ export default function Home() {
             <SectionVideo/>
         </Layout>
     );
-    // }
 
+    // }
     // return (
     //     <>
     //         <Box style={{position: "relative"}}>
